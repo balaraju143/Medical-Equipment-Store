@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Material Symbols -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body>
+
+<!-- MOBILE OVERLAY -->
+<div class="admin-sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="admin-sidebar" id="adminSidebar">
+
+    <div class="admin-sidebar-top">
+
+        <!-- LOGO -->
+        <a href="#overview" class="dashboard-logo">
+
+            <img
+                src="assets/logo 4.webp"
+                alt="Stackly Logo"
+            >
+
+        </a>
+
+
+        <!-- ADMIN PROFILE -->
+        <div class="admin-side-profile">
+
+            <div class="admin-avatar" id="sidebarAvatar">
+                A
+            </div>
+
+            <div class="admin-side-user">
+
+                <strong id="sidebarUserName">
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="admin-navigation">
+
+            <p class="admin-menu-title">
+                ADMIN PANEL
+            </p>
+
+            <a href="#overview" class="admin-nav-link active">
+
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+
+                <span>Overview</span>
+
+            </a>
+
+
+            <a href="#products" class="admin-nav-link">
+
+                <span class="material-symbols-outlined">
+                    medical_services
+                </span>
+
+                <span>Products</span>
+
+            </a>
+
+
+            <a href="#orders" class="admin-nav-link">
+
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+
+                <span>Orders</span>
+
+            </a>
+
+            <a href="#suppliers" class="admin-nav-link">
+
+                <span class="material-symbols-outlined">
+                    local_shipping
+                </span>
+
+                <span>Suppliers</span>
+
+            </a>
+
+
+            <p class="admin-menu-title admin-menu-space">
+                MANAGEMENT
+            </p>
+
+
+            <a href="#staff" class="admin-nav-link">
+
+                <span class="material-symbols-outlined">
+                    badge
+                </span>
+
+                <span>Staff Management</span>
+
+            </a>
+
+
+            <a href="#settings" class="admin-nav-link">
+
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="admin-sidebar-bottom">
+
+        <a href="404.html" class="admin-side-bottom-link">
+
+            <span class="material-symbols-outlined">
+                help
+            </span>
+
+            Help Center
+
+        </a>
+
+
+        <a href="login.html" class="admin-side-bottom-link admin-logout">
+
+            <span class="material-symbols-outlined">
+                logout
+            </span>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="admin-main">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="admin-header">
+
+        <div class="admin-header-left">
+
+            <button
+                class="admin-mobile-menu"
+                id="mobileMenuBtn"
+                aria-label="Open Menu"
+            >
+
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+
+            </button>
+
+
+            <div class="admin-header-title">
+
+                <span>Administration</span>
+
+                <h1>
+                    Medical Equipment Management
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-header-right">
+
+
+            <!-- SEARCH -->
+
+            <button
+                class="admin-header-icon"
+                onclick="window.location.href='404.html'"
+                title="Search"
+            >
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+            </button>
+
+
+            <!-- NOTIFICATION -->
+
+            <button
+                class="admin-header-icon"
+                onclick="window.location.href='404.html'"
+                title="Notifications"
+            >
+
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+
+            </button>
+
+
+            <!-- USER -->
+
+            <div class="admin-header-user">
+
+                <div
+                    class="admin-header-avatar"
+                    id="headerAvatar"
+                >
+                    A
+                </div>
+
+                <div class="admin-header-user-info">
+
+                    <strong id="headerUserName">
+                        Admin
+                    </strong>
+
+                    <span id="headerUserEmail">
+                        admin@stackly.com
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE CONTENT ================= -->
+
+    <div class="admin-content">
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section
+            class="admin-page active"
+            id="overview"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        ADMIN OVERVIEW
+                    </span>
+
+                    <h2>
+                        Dashboard Overview
+                    </h2>
+
+                    <p>
+                        Manage Stackly medical equipment,
+                        orders, customers and inventory from
+                        one centralized dashboard.
+                    </p>
+
+                </div>
+
+                <a
+                    href="404.html"
+                    class="admin-primary-btn"
+                >
+                    View Reports
+                </a>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="admin-stat-grid">
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+
+                        <span class="material-symbols-outlined">
+                            medical_services
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Products
+                        </span>
+
+                        <strong>
+                            1,284
+                        </strong>
+
+                        <small>
+                            +12% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Orders
+                        </span>
+
+                        <strong>
+                            856
+                        </strong>
+
+                        <small>
+                            +8.4% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+
+                        <span class="material-symbols-outlined">
+                            group
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Customers
+                        </span>
+
+                        <strong>
+                            5,632
+                        </strong>
+
+                        <small>
+                            +15.2% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+
+                        <span class="material-symbols-outlined">
+                            payments
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Revenue
+                        </span>
+
+                        <strong>
+                            $48,620
+                        </strong>
+
+                        <small>
+                            +11.8% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAIN DASHBOARD GRID -->
+
+            <div class="admin-overview-grid">
+
+
+                <!-- SALES -->
+
+                <div class="admin-panel admin-sales-panel">
+
+                    <div class="admin-panel-heading">
+
+                        <div>
+
+                            <h3>
+                                Sales Overview
+                            </h3>
+
+                            <span>
+                                Medical equipment sales performance
+                            </span>
+
+                        </div>
+
+                        <a href="404.html">
+                            View Report
+                        </a>
+
+                    </div>
+
+
+                    <div class="sales-chart">
+
+                        <div class="chart-y-axis">
+
+                            <span>$50k</span>
+                            <span>$40k</span>
+                            <span>$30k</span>
+                            <span>$20k</span>
+                            <span>$10k</span>
+                            <span>$0</span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <svg
+                                class="sales-svg"
+                                viewBox="0 0 700 250"
+                                preserveAspectRatio="none"
+                            >
+
+                                <polyline
+                                    points="0,195 100,155 200,175 300,100 400,125 500,70 600,95 700,35"
+                                />
+
+                            </svg>
+
+
+                            <div class="chart-months">
+
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ORDER STATUS -->
+
+                <div class="admin-panel order-status-panel">
+
+                    <div class="admin-panel-heading">
+
+                        <div>
+
+                            <h3>
+                                Order Status
+                            </h3>
+
+                            <span>
+                                Current order distribution
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-status-list">
+
+                        <div class="order-status-item">
+
+                            <span class="status-dot pending"></span>
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong>
+                                86
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-status-item">
+
+                            <span class="status-dot processing"></span>
+
+                            <span>
+                                Processing
+                            </span>
+
+                            <strong>
+                                124
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-status-item">
+
+                            <span class="status-dot shipped"></span>
+
+                            <span>
+                                Shipped
+                            </span>
+
+                            <strong>
+                                76
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-status-item">
+
+                            <span class="status-dot delivered"></span>
+
+                            <span>
+                                Delivered
+                            </span>
+
+                            <strong>
+                                570
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT ORDERS -->
+
+            <div class="admin-panel recent-orders-panel">
+
+                <div class="admin-panel-heading">
+
+                    <div>
+
+                        <h3>
+                            Recent Orders
+                        </h3>
+
+                        <span>
+                            Latest medical equipment orders
+                        </span>
+
+                    </div>
+
+                    <a href="#orders">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Order ID
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Product
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    #STK-1082
+                                </td>
+
+                                <td>
+                                    Rahul Kumar
+                                </td>
+
+                                <td>
+                                    Digital Thermometer
+                                </td>
+
+                                <td>
+                                    $85
+                                </td>
+
+                                <td>
+                                    <span class="table-status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <a href="404.html">
+                                        View
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    #STK-1081
+                                </td>
+
+                                <td>
+                                    Priya Sharma
+                                </td>
+
+                                <td>
+                                    Laboratory Microscope
+                                </td>
+
+                                <td>
+                                    $350
+                                </td>
+
+                                <td>
+                                    <span class="table-status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <a href="404.html">
+                                        View
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    #STK-1080
+                                </td>
+
+                                <td>
+                                    Apollo Clinic
+                                </td>
+
+                                <td>
+                                    Medical Wheelchair
+                                </td>
+
+                                <td>
+                                    $490
+                                </td>
+
+                                <td>
+                                    <span class="table-status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <a href="404.html">
+                                        View
+                                    </a>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    #STK-1079
+                                </td>
+
+                                <td>
+                                    City Hospital
+                                </td>
+
+                                <td>
+                                    Surgical Instrument Set
+                                </td>
+
+                                <td>
+                                    $720
+                                </td>
+
+                                <td>
+                                    <span class="table-status shipped">
+                                        Shipped
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <a href="404.html">
+                                        View
+                                    </a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section
+            class="admin-page"
+            id="products"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        PRODUCT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Medical Products
+                    </h2>
+
+                    <p>
+                        Manage medical equipment and healthcare
+                        products available in the Stackly store.
+                    </p>
+
+                </div>
+
+                <a href="404.html" class="admin-primary-btn">
+                    Add Product
+                </a>
+
+            </div>
+
+
+            <div class="management-card-grid">
+
+                <div class="management-card">
+                    <span class="material-symbols-outlined">
+                        thermometer
+                    </span>
+                    <h3>Diagnostic Equipment</h3>
+                    <strong>286 Products</strong>
+                    <a href="404.html">Manage Products</a>
+                </div>
+
+
+                <div class="management-card">
+                    <span class="material-symbols-outlined">
+                        science
+                    </span>
+                    <h3>Laboratory Equipment</h3>
+                    <strong>194 Products</strong>
+                    <a href="404.html">Manage Products</a>
+                </div>
+
+
+                <div class="management-card">
+                    <span class="material-symbols-outlined">
+                        medical_services
+                    </span>
+                    <h3>Surgical Equipment</h3>
+                    <strong>325 Products</strong>
+                    <a href="404.html">Manage Products</a>
+                </div>
+
+
+                <div class="management-card">
+                    <span class="material-symbols-outlined">
+                        accessible
+                    </span>
+                    <h3>Patient Care</h3>
+                    <strong>216 Products</strong>
+                    <a href="404.html">Manage Products</a>
+                </div>
+
+            </div>
+            <div class="admin-products-content">
+
+    <!-- PAGE HEADER -->
+    <div class="admin-products-header">
+
+        <div class="admin-products-heading">
+
+            <span class="admin-products-label">
+                STORE INVENTORY
+            </span>
+
+            <h2>
+                Product Overview
+            </h2>
+
+            <p>
+                Monitor medical products, stock availability,
+                pricing, and product status across the Stackly store.
+            </p>
+
+        </div>
+
+        <a href="404.html" class="admin-products-add-btn">
+            Add New Product
+        </a>
+
+    </div>
+
+
+    <!-- PRODUCT SUMMARY -->
+    <div class="admin-product-summary">
+
+        <div class="admin-product-summary-card">
+
+            <div class="admin-product-summary-icon">
+                <span class="material-symbols-outlined">
+                    inventory_2
+                </span>
+            </div>
+
+            <div>
+                <span>Total Products</span>
+                <strong>1,248</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-product-summary-card">
+
+            <div class="admin-product-summary-icon">
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+            </div>
+
+            <div>
+                <span>Active Products</span>
+                <strong>1,126</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-product-summary-card">
+
+            <div class="admin-product-summary-icon">
+                <span class="material-symbols-outlined">
+                    warning
+                </span>
+            </div>
+
+            <div>
+                <span>Low Stock</span>
+                <strong>42</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-product-summary-card">
+
+            <div class="admin-product-summary-icon">
+                <span class="material-symbols-outlined">
+                    block
+                </span>
+            </div>
+
+            <div>
+                <span>Out Of Stock</span>
+                <strong>18</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECENT PRODUCTS -->
+    <div class="admin-products-panel">
+
+        <div class="admin-products-panel-heading">
+
+            <div>
+                <h3>
+                    Recently Added Products
+                </h3>
+
+                <p>
+                    Latest medical products added to the Stackly store
+                </p>
+            </div>
+
+            <a href="404.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 1 -->
+        <div class="admin-product-row">
+
+            <div class="admin-product-icon">
+                <span class="material-symbols-outlined">
+                    device_thermostat
+                </span>
+            </div>
+
+            <div class="admin-product-info">
+
+                <h4>
+                    Digital Thermometer
+                </h4>
+
+                <span>
+                    Diagnostic Equipment
+                </span>
+
+            </div>
+
+            <div class="admin-product-price">
+                $50
+            </div>
+
+            <div class="admin-product-stock available">
+                In Stock
+            </div>
+
+            <a href="404.html" class="admin-product-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="admin-product-row">
+
+            <div class="admin-product-icon">
+                <span class="material-symbols-outlined">
+                    science
+                </span>
+            </div>
+
+            <div class="admin-product-info">
+
+                <h4>
+                    Laboratory Microscope
+                </h4>
+
+                <span>
+                    Laboratory Equipment
+                </span>
+
+            </div>
+
+            <div class="admin-product-price">
+                $350
+            </div>
+
+            <div class="admin-product-stock available">
+                In Stock
+            </div>
+
+            <a href="404.html" class="admin-product-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="admin-product-row">
+
+            <div class="admin-product-icon">
+                <span class="material-symbols-outlined">
+                    medical_services
+                </span>
+            </div>
+
+            <div class="admin-product-info">
+
+                <h4>
+                    Surgical Instrument Kit
+                </h4>
+
+                <span>
+                    Surgical Equipment
+                </span>
+
+            </div>
+
+            <div class="admin-product-price">
+                $425
+            </div>
+
+            <div class="admin-product-stock low">
+                Low Stock
+            </div>
+
+            <a href="404.html" class="admin-product-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="admin-product-row">
+
+            <div class="admin-product-icon">
+                <span class="material-symbols-outlined">
+                    accessible
+                </span>
+            </div>
+
+            <div class="admin-product-info">
+
+                <h4>
+                    Patient Wheelchair
+                </h4>
+
+                <span>
+                    Patient Care Equipment
+                </span>
+
+            </div>
+
+            <div class="admin-product-price">
+                $490
+            </div>
+
+            <div class="admin-product-stock out">
+                Out Of Stock
+            </div>
+
+            <a href="404.html" class="admin-product-action">
+                Details
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT MANAGEMENT INFO -->
+    <div class="admin-product-info-box">
+
+        <div class="admin-product-info-icon">
+
+            <span class="material-symbols-outlined">
+                inventory
+            </span>
+
+        </div>
+
+        <div>
+
+            <span>
+                PRODUCT INVENTORY
+            </span>
+
+            <h3>
+                Need to update product inventory?
+            </h3>
+
+            <p>
+                Manage product availability, pricing, stock levels,
+                and product information from the admin store.
+            </p>
+
+        </div>
+
+        <a href="404.html">
+            Manage Inventory
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+        <!-- ================= ORDERS ================= -->
+
+        <section
+            class="admin-page"
+            id="orders"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        ORDER MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Orders
+                    </h2>
+
+                    <p>
+                        Review and manage customer medical
+                        equipment orders.
+                    </p>
+
+                </div>
+
+                <a href="404.html" class="admin-primary-btn">
+                    Export Orders
+                </a>
+
+            </div>
+
+
+            <div class="admin-order-cards">
+
+                <div>
+                    <span class="material-symbols-outlined">
+                        pending_actions
+                    </span>
+
+                    <strong>86</strong>
+
+                    <small>Pending Orders</small>
+                </div>
+
+
+                <div>
+                    <span class="material-symbols-outlined">
+                        sync
+                    </span>
+
+                    <strong>124</strong>
+
+                    <small>Processing</small>
+                </div>
+
+
+                <div>
+                    <span class="material-symbols-outlined">
+                        local_shipping
+                    </span>
+
+                    <strong>76</strong>
+
+                    <small>Shipped</small>
+                </div>
+
+
+                <div>
+                    <span class="material-symbols-outlined">
+                        task_alt
+                    </span>
+
+                    <strong>570</strong>
+
+                    <small>Completed</small>
+                </div>
+
+            </div>
+            <div class="admin-orders-content">
+
+    <!-- HEADER -->
+    <div class="admin-orders-header">
+
+        <div class="admin-orders-heading">
+
+            <span class="admin-orders-label">
+                SALES CENTER
+            </span>
+
+            <h2>
+                Order Overview
+            </h2>
+
+            <p>
+                Track customer purchases, payment status,
+                fulfillment progress, and medical equipment deliveries.
+            </p>
+
+        </div>
+
+        <a href="404.html" class="admin-orders-btn">
+            View All Orders
+        </a>
+
+    </div>
+
+
+    <!-- ORDER OVERVIEW -->
+    <div class="admin-orders-overview">
+
+        <div class="admin-orders-overview-card">
+
+            <div class="admin-orders-icon">
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </div>
+
+            <div>
+                <span>Total Orders</span>
+                <strong>856</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-orders-overview-card">
+
+            <div class="admin-orders-icon">
+                <span class="material-symbols-outlined">
+                    payments
+                </span>
+            </div>
+
+            <div>
+                <span>Total Revenue</span>
+                <strong>$84.6K</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-orders-overview-card">
+
+            <div class="admin-orders-icon">
+                <span class="material-symbols-outlined">
+                    schedule
+                </span>
+            </div>
+
+            <div>
+                <span>Awaiting Payment</span>
+                <strong>24</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-orders-overview-card">
+
+            <div class="admin-orders-icon">
+                <span class="material-symbols-outlined">
+                    local_shipping
+                </span>
+            </div>
+
+            <div>
+                <span>Out For Delivery</span>
+                <strong>38</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECENT ORDERS -->
+    <div class="admin-orders-panel">
+
+        <div class="admin-orders-panel-heading">
+
+            <div>
+                <h3>
+                    Recent Customer Orders
+                </h3>
+
+                <p>
+                    Latest medical equipment purchases
+                </p>
+            </div>
+
+            <a href="404.html">
+                Order History
+            </a>
+
+        </div>
+
+
+        <!-- ORDER 1 -->
+        <div class="admin-order-row">
+
+            <div class="admin-order-number">
+                #STK-2098
+            </div>
+
+            <div class="admin-order-customer">
+
+                <div class="admin-customer-avatar">
+                    RK
+                </div>
+
+                <div>
+                    <h4>
+                        Rahul Kumar
+                    </h4>
+
+                    <span>
+                        Digital Thermometer
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="admin-order-total">
+                $85
+            </div>
+
+            <div class="admin-order-payment paid">
+                Paid
+            </div>
+
+            <div class="admin-order-status processing">
+                Processing
+            </div>
+
+            <a href="404.html" class="admin-order-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ORDER 2 -->
+        <div class="admin-order-row">
+
+            <div class="admin-order-number">
+                #STK-2097
+            </div>
+
+            <div class="admin-order-customer">
+
+                <div class="admin-customer-avatar">
+                    AS
+                </div>
+
+                <div>
+                    <h4>
+                        Anjali Sharma
+                    </h4>
+
+                    <span>
+                        Laboratory Microscope
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="admin-order-total">
+                $350
+            </div>
+
+            <div class="admin-order-payment paid">
+                Paid
+            </div>
+
+            <div class="admin-order-status shipped">
+                Shipped
+            </div>
+
+            <a href="404.html" class="admin-order-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ORDER 3 -->
+        <div class="admin-order-row">
+
+            <div class="admin-order-number">
+                #STK-2096
+            </div>
+
+            <div class="admin-order-customer">
+
+                <div class="admin-customer-avatar">
+                    VM
+                </div>
+
+                <div>
+                    <h4>
+                        Vikram Mehta
+                    </h4>
+
+                    <span>
+                        Patient Wheelchair
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="admin-order-total">
+                $490
+            </div>
+
+            <div class="admin-order-payment pending">
+                Pending
+            </div>
+
+            <div class="admin-order-status pending">
+                Awaiting Payment
+            </div>
+
+            <a href="404.html" class="admin-order-action">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ORDER 4 -->
+        <div class="admin-order-row">
+
+            <div class="admin-order-number">
+                #STK-2095
+            </div>
+
+            <div class="admin-order-customer">
+
+                <div class="admin-customer-avatar">
+                    PS
+                </div>
+
+                <div>
+                    <h4>
+                        Priya Singh
+                    </h4>
+
+                    <span>
+                        Surgical Instrument Kit
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="admin-order-total">
+                $425
+            </div>
+
+            <div class="admin-order-payment paid">
+                Paid
+            </div>
+
+            <div class="admin-order-status delivered">
+                Delivered
+            </div>
+
+            <a href="404.html" class="admin-order-action">
+                Details
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FULFILLMENT BOX -->
+    <div class="admin-order-support">
+
+        <div class="admin-order-support-icon">
+
+            <span class="material-symbols-outlined">
+                inventory_2
+            </span>
+
+        </div>
+
+        <div>
+
+            <span>
+                ORDER FULFILLMENT
+            </span>
+
+            <h3>
+                Need to review pending orders?
+            </h3>
+
+            <p>
+                Check payment confirmation, update order status,
+                and coordinate medical equipment deliveries.
+            </p>
+
+        </div>
+
+        <a href="404.html">
+            Manage Orders
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+        <!-- ================= SUPPLIERS ================= -->
+
+        <section
+            class="admin-page"
+            id="suppliers"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        SUPPLIER MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Medical Suppliers
+                    </h2>
+
+                    <p>
+                        Manage trusted medical equipment and
+                        healthcare product suppliers.
+                    </p>
+
+                </div>
+
+                <a href="404.html" class="admin-primary-btn">
+                    Add Supplier
+                </a>
+
+            </div>
+
+
+            <div class="supplier-grid">
+
+                <div class="supplier-card">
+
+                    <div class="supplier-icon">
+                        <span class="material-symbols-outlined">
+                            business
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            MedTech Solutions
+                        </h3>
+
+                        <p>
+                            Diagnostic Equipment
+                        </p>
+
+                        <span>
+                            Active Supplier
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="supplier-card">
+
+                    <div class="supplier-icon">
+                        <span class="material-symbols-outlined">
+                            science
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Global Lab Systems
+                        </h3>
+
+                        <p>
+                            Laboratory Equipment
+                        </p>
+
+                        <span>
+                            Active Supplier
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="supplier-card">
+
+                    <div class="supplier-icon">
+                        <span class="material-symbols-outlined">
+                            medical_services
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Care Instruments
+                        </h3>
+
+                        <p>
+                            Surgical Equipment
+                        </p>
+
+                        <span>
+                            Active Supplier
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="admin-supplier-content">
+
+    <!-- SUPPLIER HEADER -->
+    <div class="admin-supplier-header">
+
+        <div class="admin-supplier-heading">
+
+            <span class="admin-supplier-label">
+                PROCUREMENT CENTER
+            </span>
+
+            <h2>
+                Supplier Network
+            </h2>
+
+            <p>
+                Monitor supplier partnerships, product sourcing,
+                delivery activity, and supplier performance.
+            </p>
+
+        </div>
+
+        <a href="404.html" class="admin-supplier-btn">
+            New Partnership
+        </a>
+
+    </div>
+
+
+    <!-- SUPPLIER SUMMARY -->
+    <div class="admin-supplier-summary">
+
+        <div class="admin-supplier-summary-card">
+
+            <div class="admin-supplier-summary-icon">
+                <span class="material-symbols-outlined">
+                    handshake
+                </span>
+            </div>
+
+            <div>
+                <span>Active Partners</span>
+                <strong>48</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-supplier-summary-card">
+
+            <div class="admin-supplier-summary-icon">
+                <span class="material-symbols-outlined">
+                    inventory_2
+                </span>
+            </div>
+
+            <div>
+                <span>Products Supplied</span>
+                <strong>864</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-supplier-summary-card">
+
+            <div class="admin-supplier-summary-icon">
+                <span class="material-symbols-outlined">
+                    local_shipping
+                </span>
+            </div>
+
+            <div>
+                <span>Active Deliveries</span>
+                <strong>32</strong>
+            </div>
+
+        </div>
+
+
+        <div class="admin-supplier-summary-card">
+
+            <div class="admin-supplier-summary-icon">
+                <span class="material-symbols-outlined">
+                    verified
+                </span>
+            </div>
+
+            <div>
+                <span>Verified Partners</span>
+                <strong>42</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPPLIER ACTIVITY -->
+    <div class="admin-supplier-activity">
+
+        <div class="admin-supplier-activity-header">
+
+            <div>
+                <h3>
+                    Supplier Activity
+                </h3>
+
+                <p>
+                    Latest procurement and supplier updates
+                </p>
+            </div>
+
+            <a href="404.html">
+                View Activity
+            </a>
+
+        </div>
+
+
+        <!-- ACTIVITY 1 -->
+        <div class="admin-supplier-activity-row">
+
+            <div class="admin-supplier-activity-icon">
+                <span class="material-symbols-outlined">
+                    local_shipping
+                </span>
+            </div>
+
+            <div class="admin-supplier-activity-info">
+
+                <h4>
+                    MedCore Technologies
+                </h4>
+
+                <span>
+                    Diagnostic equipment shipment
+                </span>
+
+            </div>
+
+            <div class="admin-supplier-activity-date">
+                Today
+            </div>
+
+            <div class="admin-supplier-activity-status delivered">
+                Delivered
+            </div>
+
+            <a href="404.html" class="admin-supplier-details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ACTIVITY 2 -->
+        <div class="admin-supplier-activity-row">
+
+            <div class="admin-supplier-activity-icon">
+                <span class="material-symbols-outlined">
+                    inventory
+                </span>
+            </div>
+
+            <div class="admin-supplier-activity-info">
+
+                <h4>
+                    Global Lab Care
+                </h4>
+
+                <span>
+                    Laboratory equipment order
+                </span>
+
+            </div>
+
+            <div class="admin-supplier-activity-date">
+                29 Sep 2026
+            </div>
+
+            <div class="admin-supplier-activity-status processing">
+                Processing
+            </div>
+
+            <a href="404.html" class="admin-supplier-details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ACTIVITY 3 -->
+        <div class="admin-supplier-activity-row">
+
+            <div class="admin-supplier-activity-icon">
+                <span class="material-symbols-outlined">
+                    medical_services
+                </span>
+            </div>
+
+            <div class="admin-supplier-activity-info">
+
+                <h4>
+                    CarePro Instruments
+                </h4>
+
+                <span>
+                    Surgical equipment supply
+                </span>
+
+            </div>
+
+            <div class="admin-supplier-activity-date">
+                27 Sep 2026
+            </div>
+
+            <div class="admin-supplier-activity-status review">
+                Under Review
+            </div>
+
+            <a href="404.html" class="admin-supplier-details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- ACTIVITY 4 -->
+        <div class="admin-supplier-activity-row">
+
+            <div class="admin-supplier-activity-icon">
+                <span class="material-symbols-outlined">
+                    monitoring
+                </span>
+            </div>
+
+            <div class="admin-supplier-activity-info">
+
+                <h4>
+                    HealthSource Medical
+                </h4>
+
+                <span>
+                    Patient care equipment supply
+                </span>
+
+            </div>
+
+            <div class="admin-supplier-activity-date">
+                25 Sep 2026
+            </div>
+
+            <div class="admin-supplier-activity-status active">
+                Active
+            </div>
+
+            <a href="404.html" class="admin-supplier-details-btn">
+                Details
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPPLIER SUPPORT -->
+    <div class="admin-supplier-support">
+
+        <div class="admin-supplier-support-icon">
+
+            <span class="material-symbols-outlined">
+                support_agent
+            </span>
+
+        </div>
+
+        <div>
+
+            <span>
+                SUPPLIER SUPPORT
+            </span>
+
+            <h3>
+                Need to update supplier information?
+            </h3>
+
+            <p>
+                Review supplier details, delivery activity,
+                product sourcing, and partnership records.
+            </p>
+
+        </div>
+
+        <a href="404.html">
+            Manage Suppliers
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+        <!-- ================= STAFF ================= -->
+
+        <section
+            class="admin-page"
+            id="staff"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        ADMINISTRATION
+                    </span>
+
+                    <h2>
+                        Staff Management
+                    </h2>
+
+                    <p>
+                        Manage Stackly administrative and
+                        support team members.
+                    </p>
+
+                </div>
+
+                <a href="404.html" class="admin-primary-btn">
+                    Add Staff
+                </a>
+
+            </div>
+
+
+            <div class="staff-grid">
+
+                <div class="staff-card">
+
+                    <div class="staff-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Admin Manager
+                        </h3>
+
+                        <p>
+                            Store Administrator
+                        </p>
+
+                        <span>
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="staff-card">
+
+                    <div class="staff-avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Support Manager
+                        </h3>
+
+                        <p>
+                            Customer Support
+                        </p>
+
+                        <span>
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="staff-card">
+
+                    <div class="staff-avatar">
+                        I
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Inventory Manager
+                        </h3>
+
+                        <p>
+                            Stock Management
+                        </p>
+
+                        <span>
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SETTINGS ================= -->
+
+        <section
+            class="admin-page"
+            id="settings"
+        >
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        SYSTEM SETTINGS
+                    </span>
+
+                    <h2>
+                        Admin Settings
+                    </h2>
+
+                    <p>
+                        Manage Stackly dashboard preferences
+                        and account settings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-grid">
+
+                <a href="404.html" class="settings-card">
+
+                    <span class="material-symbols-outlined">
+                        manage_accounts
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Account Settings
+                        </h3>
+
+                        <p>
+                            Manage administrator account details.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="404.html" class="settings-card">
+
+                    <span class="material-symbols-outlined">
+                        security
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Security
+                        </h3>
+
+                        <p>
+                            Manage password and security settings.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="404.html" class="settings-card">
+
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Notifications
+                        </h3>
+
+                        <p>
+                            Configure admin notifications.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

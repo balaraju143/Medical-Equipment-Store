@@ -1,0 +1,1312 @@
+/* =========================================================
+   REMOVE DEFAULT PAGE GAP
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+.medical-navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 280px);
+    max-width: 1500px;
+
+    height: 78px;
+
+    z-index: 9999;
+
+    padding: 20px 0;
+
+    background: transparent;
+}
+
+
+/* ================================
+   INNER NAVBAR
+================================ */
+
+.navbar-inner {
+    width: 100%;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    border-radius: 0 0 14px 14px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(210, 230, 235, 0.8);
+
+    box-shadow: 0 5px 25px rgba(19, 74, 88, 0.06);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* ================================
+   STACKLY LOGO
+================================ */
+
+.stackly-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.logo-mark {
+    position: relative;
+
+    width: 37px;
+    height: 37px;
+
+    display: block;
+}
+
+.logo-shape {
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 4px;
+}
+
+.shape-1 {
+    top: 1px;
+    left: 14px;
+
+    background: #15594e;
+
+    transform: rotate(25deg);
+}
+
+.shape-2 {
+    top: 15px;
+    left: 1px;
+
+    background: #f08032;
+
+    transform: rotate(25deg);
+}
+
+.shape-3 {
+    top: 15px;
+    right: 1px;
+
+    background: #287f72;
+
+    transform: rotate(25deg);
+}
+
+.shape-4 {
+    bottom: 0;
+    left: 14px;
+
+    background: #ef8b35;
+
+    transform: rotate(25deg);
+}
+
+.logo-text {
+    color: #092f3a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+/* ================================
+   DESKTOP MENU
+================================ */
+
+.desktop-menu {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+}
+
+.desktop-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #062f3b;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.desktop-menu a:hover,
+.desktop-menu a.active {
+    color: #16869a;
+}
+
+
+/* ACTIVE LINE */
+
+.desktop-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #16869a;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.desktop-menu a:hover::after,
+.desktop-menu a.active::after {
+    width: 18px;
+}
+
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+
+.login-btn {
+    margin-left: auto;
+
+    width: 177px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #298fa1;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #207b8c;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 18px rgba(41, 143, 161, 0.2);
+}
+
+
+/* ================================
+   MOBILE TOGGLE
+================================ */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #298fa1;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 2px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .medical-navbar {
+        width: calc(100% - 80px);
+    }
+
+    .desktop-menu {
+        gap: 25px;
+    }
+
+    .login-btn {
+        width: 140px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .medical-navbar {
+        top: 0;
+        left: 0;
+
+        transform: none;
+
+        width: 100%;
+
+        height: 72px;
+
+        padding: 7px 8px;
+
+        margin: 0;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar-inner {
+        width: 100%;
+
+        height: 58px;
+
+        padding: 0 12px;
+
+        border-radius: 0 0 11px 11px;
+    }
+
+
+    /* LOGO */
+
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+
+    /* HIDE DESKTOP */
+
+    .desktop-menu,
+    .login-btn {
+        display: none;
+    }
+
+
+    /* TOGGLE */
+
+    .menu-toggle {
+        display: flex;
+
+        margin-left: auto;
+    }
+
+
+    /* ================================
+       MOBILE MENU BOX
+    ================================ */
+
+    .mobile-menu {
+        position: absolute;
+
+        top: 66px;
+        right: 8px;
+
+        width: min(260px, calc(100vw - 16px));
+
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        border: 1px solid #d8e9ed;
+
+        border-radius: 14px;
+
+        box-shadow:
+            0 15px 40px rgba(20, 73, 86, 0.16);
+
+        backdrop-filter: blur(15px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-12px) scale(0.97);
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+    }
+
+
+    /* OPEN */
+
+    .mobile-menu.show {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0) scale(1);
+    }
+
+
+    /* MENU LINKS */
+
+    .mobile-menu a {
+        width: 100%;
+
+        padding: 13px 15px;
+
+        border-radius: 9px;
+
+        color: #07333e;
+
+        text-decoration: none;
+
+        font-family: Arial, sans-serif;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
+        background: #e9f6f8;
+
+        color: #16869a;
+    }
+
+
+    /* MOBILE LOGIN */
+
+    .mobile-menu .mobile-login {
+        margin-top: 6px;
+
+        text-align: center;
+
+        background: #298fa1;
+
+        color: #ffffff;
+
+        font-weight: 600;
+    }
+
+    .mobile-menu .mobile-login:hover {
+        background: #207b8c;
+
+        color: #ffffff;
+    }
+
+
+    /* ================================
+       HAMBURGER → X
+    ================================ */
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .medical-navbar {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .navbar-inner {
+        padding: 0 10px;
+    }
+
+    .logo-text {
+        font-size: 21px;
+    }
+
+    .mobile-menu {
+        right: 5px;
+
+        width: calc(100vw - 10px);
+    }
+}
+
+/* ================================
+   STACKLY IMAGE LOGO
+================================ */
+
+.stackly-logo {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.stackly-logo-img {
+    display: block;
+
+    width: 210px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* MOBILE LOGO */
+
+@media (max-width: 768px) {
+
+    .stackly-logo-img {
+        width: 165px;
+        height: auto;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .stackly-logo-img {
+        width: 195px;
+        height:190px;
+        margin-left:-30px;
+    }
+
+}
+
+
+
+/* =========================================================
+   STACKLY MEDICAL FOOTER
+========================================================= */
+.medical-footer {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(4, 29, 43, 0.88),
+            rgba(4, 29, 43, 0.88)
+        ),
+        url("../assets/lab-main\ \(1\).webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+/* =========================================================
+   MEDICAL BACKGROUND DESIGN
+========================================================= */
+/*
+.medical-footer::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.13;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 48%,
+            #59d5df 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 48%,
+            #59d5df 49%,
+            transparent 50%
+        );
+
+    background-size: 140px 140px;
+
+    pointer-events: none;
+}
+
+
+/* subtle medical glow */
+
+.medical-footer::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    left: -180px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background: rgba(53, 195, 206, 0.10);
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+.medical-footer-container {
+    width: 100%;
+    margin: 0;
+    padding: 75px 5% 85px;
+    
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.45fr
+        0.75fr
+        1fr
+        1.25fr;
+
+    gap: 65px;
+}
+/* =========================================================
+   BRAND
+========================================================= */
+
+.medical-footer-brand {
+    min-width: 0;
+}
+
+
+.medical-footer-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    margin-bottom: 25px;
+}
+
+
+.medical-footer-logo img {
+    width: 220px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+    margin-top:-35px;
+    margin-left: 50px;
+}
+
+
+.medical-footer-brand > p {
+    max-width: 390px;
+
+    margin: 0;
+
+    color: #a7bcc6;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+    margin-top:-60px;
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.medical-footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 32px;
+}
+
+
+.medical-footer-socials a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+        margin-left: 15px;
+}
+
+
+.medical-footer-socials a:hover {
+    background: #35c3ce;
+
+    color: #082f3e;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.medical-footer-column {
+    min-width: 0;
+}
+
+
+.medical-footer-column h3,
+.medical-footer-newsletter h3 {
+    margin: 0 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.medical-footer-column h3 span,
+.medical-footer-newsletter h3 span {
+    width: 4px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border-radius: 2px;
+
+    background: #35c3ce;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.medical-footer-column ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.medical-footer-column li {
+    margin-bottom: 18px;
+}
+
+
+.medical-footer-column a {
+    color: #a7bcc6;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+
+.medical-footer-column a:hover {
+    color: #35c3ce;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.medical-footer-newsletter p {
+    max-width: 360px;
+
+    margin: 0 0 28px;
+
+    color: #a7bcc6;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
+.medical-newsletter-form {
+    width: 100%;
+    max-width: 370px;
+
+    height: 58px;
+
+    display: flex;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    overflow: hidden;
+}
+
+
+.medical-newsletter-form input {
+    width: calc(100% - 68px);
+
+    height: 100%;
+
+    padding: 0 20px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+}
+
+
+.medical-newsletter-form input::placeholder {
+    color: #758e9a;
+}
+
+
+.medical-newsletter-form button {
+    width: 68px;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: #35c3ce;
+
+    color: #082f3e;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.medical-newsletter-form button:hover {
+    background: #ffffff;
+
+    color: #082f3e;
+}
+
+
+/* =========================================================
+   EMAIL ERROR
+========================================================= */
+
+.medical-email-error {
+    min-height: 20px;
+
+    margin: 8px 0 0 !important;
+
+    color: #ff7777 !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.4 !important;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-4px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.medical-email-error.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+.medical-footer-bottom {
+    width: 100%;
+    margin: 0;
+    padding: 27px 5%;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.medical-footer-bottom p {
+    margin: 0;
+
+    color: #8199a4;
+
+    font-size: 11px;
+}
+
+
+.medical-footer-crafted {
+    text-align: center;
+}
+
+
+.medical-footer-crafted i {
+    margin: 0 4px;
+
+    color: #35c3ce;
+}
+
+
+.medical-footer-legal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.medical-footer-legal a {
+    color: #8199a4;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: color 0.25s ease;
+}
+
+
+.medical-footer-legal a:hover {
+    color: #35c3ce;
+}
+
+
+.medical-footer-legal span {
+    color: #506b76;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .medical-footer-container {
+        width: 92%;
+
+        grid-template-columns:
+            1.3fr
+            0.8fr
+            1fr;
+
+        gap: 45px;
+    }
+
+    .medical-footer-newsletter {
+        grid-column: 1 / -1;
+
+        max-width: 500px;
+    }
+
+    .medical-footer-bottom {
+        width: 92%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .medical-footer-container {
+        width:100%;
+
+        padding: 60px 0 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 42px;
+
+        text-align: center;
+    }
+
+
+    /* BRAND */
+
+    .medical-footer-brand {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .medical-footer-logo {
+        margin-bottom: 25px;
+    }
+
+
+    .medical-footer-logo img {
+        width: 250px;
+        margin-left: 0;
+    }
+
+
+    .medical-footer-brand > p {
+        max-width: 390px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    /* SOCIAL */
+
+    .medical-footer-socials {
+        justify-content: center;
+
+        margin-top: 25px;
+    }
+
+
+    /* COLUMNS */
+
+    .medical-footer-column {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .medical-footer-column h3,
+    .medical-footer-newsletter h3 {
+        margin-bottom: 23px;
+
+        font-size: 19px;
+    }
+
+
+    .medical-footer-column h3 span,
+    .medical-footer-newsletter h3 span {
+        height: 29px;
+    }
+
+
+    .medical-footer-column li {
+        margin-bottom: 14px;
+    }
+
+
+    .medical-footer-column a {
+        font-size: 16px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .medical-footer-newsletter {
+        width: 90%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .medical-footer-newsletter p {
+        max-width: 400px;
+
+        font-size: 12px;
+    }
+
+
+    .medical-newsletter-form {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 54px;
+
+        text-align: left;
+    }
+
+
+    /* BOTTOM */
+
+    .medical-footer-bottom {
+        width: calc(100% - 30px);
+
+        padding: 23px 0 27px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 14px;
+
+        text-align: center;
+    }
+
+
+    .medical-footer-bottom p {
+        font-size: 13px;
+    }
+
+
+    .medical-footer-legal {
+        justify-content: center;
+    }
+
+
+    .medical-footer-legal a,
+    .medical-footer-legal span {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .medical-footer-container {
+        width:100%;
+
+        padding-top: 50px;
+    }
+
+
+    .medical-footer-socials a {
+        width: 44px;
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+
+    .medical-footer-column h3,
+    .medical-footer-newsletter h3 {
+        font-size: 18px;
+    }
+
+
+    .medical-newsletter-form {
+        height: 52px;
+    }
+
+
+    .medical-newsletter-form input {
+        padding: 0 15px;
+
+        font-size: 12px;
+    }
+
+
+    .medical-newsletter-form button {
+        width: 60px;
+    }
+}

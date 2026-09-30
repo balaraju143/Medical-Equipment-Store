@@ -1,0 +1,6394 @@
+/* =========================================
+   MEDICAL HERO
+========================================= */
+
+.medical-hero {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 680px;
+    padding-top: 70px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            115deg,
+            #f5fbfd 0%,
+            #eaf6fa 48%,
+            #d8edf3 100%
+        );
+
+    font-family: "Manrope", sans-serif;
+
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1250px, 90%);
+
+    min-height: 680px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================
+   GEOMETRIC BACKGROUND
+========================================= */
+
+.hero-shape {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+/* LEFT LARGE SHAPE */
+
+.hero-shape-one {
+
+    width: 700px;
+    height: 600px;
+
+    left: -280px;
+    top: 80px;
+
+    background: rgba(255,255,255,0.42);
+
+    clip-path: polygon(
+        0 0,
+        100% 35%,
+        65% 100%,
+        0 75%
+    );
+
+}
+
+
+/* CENTER SHAPE */
+
+.hero-shape-two {
+
+    width: 900px;
+    height: 500px;
+
+    left: 300px;
+    bottom: -170px;
+
+    background: rgba(196,220,230,0.40);
+
+    clip-path: polygon(
+        0 20%,
+        70% 0,
+        100% 45%,
+        35% 100%
+    );
+
+}
+
+
+/* RIGHT TOP */
+
+.hero-shape-three {
+
+    width: 650px;
+    height: 500px;
+
+    right: -250px;
+    top: -130px;
+
+    background: rgba(255,255,255,0.30);
+
+    clip-path: polygon(
+        40% 0,
+        100% 0,
+        100% 70%,
+        0 100%
+    );
+
+}
+
+
+/* RIGHT BOTTOM */
+
+.hero-shape-four {
+
+    width: 800px;
+    height: 300px;
+
+    right: -200px;
+    bottom: -120px;
+
+    background: rgba(187,215,226,0.40);
+
+    clip-path: polygon(
+        0 50%,
+        70% 0,
+        100% 30%,
+        30% 100%
+    );
+
+}
+
+
+/* LIGHT DIAGONAL */
+
+.hero-shape-five {
+
+    width: 2px;
+    height: 800px;
+
+    right: 35%;
+
+    top: -100px;
+
+    background: rgba(255,255,255,0.6);
+
+    transform: rotate(35deg);
+
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 56%;
+
+    padding-top: 30px;
+
+}
+
+
+/* SMALL TITLE */
+
+.hero-small-title {
+
+    margin-bottom: 18px;
+
+    color: #168da2;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero-title {
+
+    margin: 0;
+
+    color: #082f3e;
+
+    font-size: clamp(45px, 4.2vw, 64px);
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+
+    max-width: 540px;
+
+    margin: 22px 0 28px;
+
+    color: #627b84;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 164px;
+
+    height: 42px;
+
+    padding: 0 24px;
+
+    border-radius: 11px;
+
+    background: #2995a8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.hero-button:hover {
+
+    background: #082f3e;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(8,47,62,0.18);
+
+}
+
+
+/* =========================================
+   CUSTOMER AREA
+========================================= */
+
+.customer-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-top: 82px;
+
+}
+
+
+/* =========================================
+   AVATARS
+========================================= */
+
+.customer-avatars {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.avatar {
+
+    width: 58px;
+    height: 58px;
+
+    margin-left: -9px;
+
+    overflow: hidden;
+
+    border: 3px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #dbeaf0;
+
+}
+
+
+.avatar:first-child {
+
+    margin-left: 0;
+
+}
+
+
+.avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.customer-rating {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.customer-rating strong {
+
+    color: #082f3e;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+}
+
+
+.customer-rating span {
+
+    color: #758d95;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   DOCTOR
+========================================= */
+
+.hero-doctor {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 44%;
+
+    height: 680px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+}
+
+
+.doctor-image {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(430px, 100%);
+
+    max-height: 640px;
+
+    object-fit: contain;
+
+    object-position: bottom center;
+
+}
+
+
+/* =========================================
+   HAPPY CLIENT CARD
+========================================= */
+
+.happy-client-card {
+
+    position: absolute;
+
+    z-index: 10;
+
+    right: 0;
+
+    bottom: 130px;
+
+    width: 180px;
+
+    height: 126px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    border-radius: 13px;
+
+    background: #082f3e;
+
+    box-shadow:
+        0 15px 35px rgba(8,47,62,0.14);
+
+}
+
+
+.happy-client-card strong {
+
+    color: #ffffff;
+
+    font-size: 36px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+}
+
+
+.happy-client-card span {
+
+    margin-top: 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+
+        width: 92%;
+
+    }
+
+    .hero-title {
+
+        font-size: 46px;
+
+    }
+
+    .customer-area {
+
+        margin-top: 55px;
+
+    }
+
+    .happy-client-card {
+
+        right: -10px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .medical-hero {
+
+        min-height: 850px;
+
+    }
+
+
+    .hero-container {
+
+        width: 100%;
+
+        min-height: 850px;
+
+        padding: 105px 15px 80px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        text-align: center;
+
+    }
+
+
+    /* CONTENT */
+
+    .hero-content {
+
+        width: 100%;
+
+        padding-top: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .hero-small-title {
+
+        margin-bottom: 12px;
+
+        font-size: 11px;
+
+    }
+
+
+    .hero-title {
+
+        max-width: 370px;
+
+        font-size: clamp(31px, 8vw, 40px);
+
+        line-height: 1.08;
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .desktop-break {
+
+        display: none;
+
+    }
+
+
+    .hero-description {
+
+        max-width: 360px;
+
+        margin: 17px auto 22px;
+
+        font-size: 12px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .hero-button {
+
+        min-width: 145px;
+
+        height: 39px;
+
+        font-size: 13px;
+
+        border-radius: 9px;
+
+    }
+
+
+    /* CUSTOMER */
+
+    .customer-area {
+
+        margin-top: 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+    }
+
+
+    .customer-avatars {
+
+        justify-content: center;
+
+    }
+
+
+    .avatar {
+
+        width: 50px;
+        height: 50px;
+
+        margin-left: -8px;
+
+    }
+
+
+    .customer-rating {
+
+        align-items: center;
+
+    }
+
+
+    .customer-rating strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .customer-rating span {
+
+        font-size: 13px;
+
+    }
+
+
+    /* DOCTOR */
+
+    .hero-doctor {
+
+        width: 100%;
+
+        height: 390px;
+
+        margin-top: 20px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: flex-end;
+
+    }
+
+
+    .doctor-image {
+
+        width: 300px;
+
+        max-width: 85%;
+
+        max-height: 390px;
+
+    }
+
+
+    /* HAPPY CLIENT */
+
+    .happy-client-card {
+
+        right: 50%;
+
+        bottom: 5px;
+
+        transform: translateX(50%);
+
+        width: 180px;
+
+        height: 78px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .happy-client-card strong {
+
+        font-size: 23px;
+
+    }
+
+
+    .happy-client-card span {
+
+        margin-top: 4px;
+
+        font-size: 11px;
+
+    }
+
+
+    /* BOTTOM */
+
+    .hero-bottom-card {
+
+        width: calc(100% - 20px);
+
+        height: 35px;
+
+        border-radius: 12px 12px 0 0;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .medical-hero {
+
+        min-height: 800px;
+
+    }
+
+
+    .hero-container {
+
+        min-height: 800px;
+
+        padding-top: 95px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 29px;
+
+    }
+
+
+    .hero-description {
+
+        max-width: 320px;
+
+        font-size: 14px;
+
+    }
+
+
+    .customer-area {
+
+        margin-top: 42px;
+
+    }
+
+
+    .avatar {
+
+        width: 45px;
+        height: 45px;
+
+    }
+
+
+    .hero-doctor {
+
+        height: 330px;
+
+    }
+
+
+    .doctor-image {
+
+        width: 265px;
+
+    }
+
+
+    .happy-client-card {
+
+        width: 165px;
+
+        height: 70px;
+
+    }
+
+}
+
+
+/* =========================================
+   HEALTH PRIORITY SECTION
+========================================= */
+
+.health-priority-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 0 90px;
+
+    background: #edf7f8;
+
+    font-family: "Manrope", sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.health-priority-card {
+
+    position: relative;
+
+    width: min(90%, 1730px);
+
+    min-height: 372px;
+
+    margin: -1px auto 0;
+
+    padding: 78px 10% 70px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    z-index: 5;
+
+    box-shadow:
+        0 8px 35px rgba(17, 75, 87, 0.025);
+}
+
+
+/* =========================================
+   TOP CONTENT
+========================================= */
+
+.priority-top {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 65px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   LEFT HEADING
+========================================= */
+
+.priority-heading {
+
+    opacity: 1;
+}
+
+.priority-heading h2 {
+
+    margin: 0;
+
+    color: #082f3e;
+
+    font-size: clamp(34px, 3vw, 42px);
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   RIGHT DESCRIPTION
+========================================= */
+
+.priority-description {
+
+    opacity: 1;
+
+    padding-top: 1px;
+}
+
+.priority-description p {
+
+    margin: 0;
+
+    color: #71858d;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================
+   COUNTERS
+========================================= */
+
+.priority-counters {
+
+    width: 100%;
+
+    margin-top: 58px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    column-gap: 45px;
+
+}
+
+
+/* =========================================
+   SINGLE COUNTER
+========================================= */
+
+.priority-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   ICON BOX
+========================================= */
+
+.counter-icon {
+
+    flex: 0 0 58px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: #2995a8;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.counter-icon .material-symbols-outlined {
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+/* ICON HOVER */
+
+.priority-counter:hover .counter-icon {
+
+    transform: translateY(-4px);
+
+    background: #082f3e;
+}
+
+
+/* =========================================
+   COUNTER CONTENT
+========================================= */
+
+.counter-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.counter-number {
+
+    color: #082f3e;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.counter-label {
+
+    color: #7b8e95;
+
+    font-size: 12px;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .health-priority-card {
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+
+    .priority-top {
+
+        column-gap: 40px;
+    }
+
+
+    .priority-counters {
+
+        column-gap: 25px;
+    }
+
+
+    .priority-counter {
+
+        gap: 12px;
+    }
+
+
+    .counter-icon {
+
+        flex-basis: 52px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .counter-number {
+
+        font-size: 21px;
+    }
+
+
+    .counter-label {
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 850px) {
+
+    .priority-counters {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 30px;
+    }
+
+}
+
+/* =========================================
+   MOBILE - HEALTH PRIORITY
+========================================= */
+
+@media (max-width: 768px) {
+
+    .health-priority-section {
+        width: 100%;
+        padding: 0 0 55px;
+        overflow: hidden;
+    }
+
+
+    /* =====================================
+       MAIN CARD
+    ===================================== */
+
+    .health-priority-card {
+        width: calc(100% - 20px);
+
+        min-height: auto;
+
+        margin: 0 auto;
+
+        padding: 45px 22px 45px;
+
+        border-radius: 14px;
+    }
+
+
+    /* =====================================
+       TOP CONTENT
+    ===================================== */
+
+    .priority-top {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 22px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .priority-heading {
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .priority-heading h2 {
+
+        width: 100%;
+
+        max-width: 400px;
+
+        margin: 0;
+
+        color: #082f3e;
+
+        font-size: 32px;
+
+        line-height: 1.18;
+
+        font-weight: 600;
+
+        letter-spacing: -1px;
+    }
+
+
+    .desktop-break {
+        display: none;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .priority-description {
+
+        width: 100%;
+
+        max-width: 430px;
+
+        padding: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .priority-description p {
+
+        width: 100%;
+
+        margin: 0;
+
+        color: #71858d;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        font-weight: 400;
+    }
+
+
+    /* =====================================
+       COUNTERS - 2 x 2
+    ===================================== */
+
+    .priority-counters {
+
+        width: 100%;
+
+        margin-top: 42px;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 20px;
+
+        row-gap: 32px;
+
+        align-items: center;
+    }
+
+
+    /* =====================================
+       SINGLE COUNTER
+    ===================================== */
+
+    .priority-counter {
+
+        width: 100%;
+
+        max-width: none;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       ICON
+    ===================================== */
+
+    .counter-icon {
+
+        flex: 0 0 50px;
+
+        width: 50px;
+
+        height: 50px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 6px;
+    }
+
+
+    .counter-icon .material-symbols-outlined {
+
+        font-size: 25px;
+    }
+
+
+    /* =====================================
+       COUNTER CONTENT
+    ===================================== */
+
+    .counter-content {
+
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        text-align: left;
+    }
+
+
+    /* =====================================
+       NUMBER
+    ===================================== */
+
+    .counter-number {
+
+        margin: 0;
+
+        color: #082f3e;
+
+        font-size: 21px;
+
+        line-height: 1;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================
+       LABEL
+    ===================================== */
+
+    .counter-label {
+
+        margin: 0;
+
+        color: #7b8e95;
+
+        font-size: 11px;
+
+        line-height: 1.3;
+
+        font-weight: 400;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .health-priority-section {
+        padding-bottom: 45px;
+    }
+
+
+    /* CARD */
+
+    .health-priority-card {
+
+        width: calc(100% - 14px);
+
+        padding: 38px 15px 42px;
+
+        border-radius: 13px;
+    }
+
+
+    /* HEADING */
+
+    .priority-heading h2 {
+
+        max-width: 340px;
+
+        font-size: 29px;
+
+        line-height: 1.18;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    /* DESCRIPTION */
+
+    .priority-description {
+
+        max-width: 335px;
+    }
+
+
+    .priority-description p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* COUNTERS */
+
+    .priority-counters {
+
+        margin-top: 38px;
+
+        column-gap: 12px;
+
+        row-gap: 28px;
+    }
+
+
+    /* COUNTER */
+
+    .priority-counter {
+
+        gap: 8px;
+    }
+
+
+    /* ICON */
+
+    .counter-icon {
+
+        flex: 0 0 46px;
+
+        width: 46px;
+
+        height: 46px;
+
+        border-radius: 6px;
+    }
+
+
+    .counter-icon .material-symbols-outlined {
+
+        font-size: 23px;
+    }
+
+
+    /* NUMBER */
+
+    .counter-number {
+
+        font-size: 18px;
+    }
+
+
+    /* LABEL */
+
+    .counter-label {
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    .health-priority-card {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .priority-heading h2 {
+
+        font-size: 27px;
+    }
+
+
+    .priority-description p {
+
+        font-size: 12px;
+    }
+
+
+    .priority-counters {
+
+        column-gap: 8px;
+    }
+
+
+    .priority-counter {
+
+        gap: 6px;
+    }
+
+
+    .counter-icon {
+
+        flex: 0 0 42px;
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .counter-icon .material-symbols-outlined {
+
+        font-size: 21px;
+    }
+
+
+    .counter-number {
+
+        font-size: 16px;
+    }
+
+
+    .counter-label {
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   MEDICAL OFFERS SECTION
+========================================= */
+
+.medical-offers-section {
+
+    width: 100%;
+
+    padding: 0 0 80px;
+
+    background: #edf7f8;
+
+    font-family: "Manrope", sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.medical-offers-container {
+
+    width: min(90%, 1250px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    grid-template-rows:
+        290px 260px;
+
+    gap: 17px;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.offer-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 13px;
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   FIRST ROW
+========================================= */
+
+.offer-card-1 {
+
+    grid-column: span 3;
+}
+
+.offer-card-2 {
+
+    grid-column: span 3;
+}
+
+
+/* =========================================
+   SECOND ROW
+========================================= */
+
+.offer-card-3 {
+
+    grid-column: span 2;
+}
+
+.offer-card-4 {
+
+    grid-column: span 2;
+}
+
+.offer-card-5 {
+
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.offer-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 62%;
+
+    padding: 40px;
+
+}
+
+
+/* =========================================
+   LARGE CARD CONTENT
+========================================= */
+
+.offer-large .offer-content {
+
+    padding: 40px;
+
+}
+
+
+/* =========================================
+   SMALL CARD CONTENT
+========================================= */
+
+.offer-small .offer-content {
+
+    width: 100%;
+
+    padding: 38px 40px;
+
+}
+
+
+/* =========================================
+   TAG
+========================================= */
+
+.offer-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 32px;
+
+    padding: 0 17px;
+
+    border-radius: 30px;
+
+    background: #082f3e;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.offer-card h3 {
+
+    margin: 17px 0 14px;
+
+    color: #082f3e;
+
+    font-size: 24px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -0.7px;
+}
+
+
+.offer-small h3 {
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.offer-card p {
+
+    max-width: 340px;
+
+    margin: 0;
+
+    color: #748890;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+}
+
+
+.offer-small p {
+
+    max-width: 310px;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.offer-button {
+
+    width: 122px;
+
+    height: 33px;
+
+    margin-top: 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 4px;
+
+    background: #2995a8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.offer-button .material-symbols-outlined {
+
+    font-size: 16px;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 20;
+}
+
+
+.offer-button:hover {
+
+    background: #082f3e;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(8, 47, 62, 0.18);
+}
+
+
+/* =========================================
+   IMAGES
+========================================= */
+
+.offer-image {
+
+    position: absolute;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.offer-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   THERMOMETER IMAGE
+========================================= */
+
+.offer-card-1 .offer-image {
+
+    right: -8px;
+
+    bottom: -5px;
+
+    width: 46%;
+
+    height: 90%;
+}
+
+
+/* =========================================
+   MASK IMAGE
+========================================= */
+
+.offer-card-2 .offer-image {
+
+    left: 292px;
+
+    bottom: -2px;
+
+    width: 48%;
+
+    height: 90%;
+}
+
+
+/* =========================================
+   SURGICAL IMAGE
+========================================= */
+
+.offer-card-4 .offer-image {
+
+    right: -15px;
+
+    bottom: 95px;
+
+    width: 58%;
+
+    height: 80%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .medical-offers-container {
+
+        width: 92%;
+
+        grid-template-rows:
+            270px 250px;
+
+        gap: 15px;
+    }
+
+
+    .offer-content {
+
+        padding: 30px;
+    }
+
+
+    .offer-large .offer-content {
+
+        padding: 30px;
+    }
+
+
+    .offer-small .offer-content {
+
+        padding: 30px;
+    }
+
+
+    .offer-card h3 {
+
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .medical-offers-section {
+
+        padding: 0 0 55px;
+    }
+
+
+    .medical-offers-container {
+
+        width: calc(100% - 20px);
+
+        margin: 0 auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* =====================================
+       ALL CARDS
+    ===================================== */
+
+    .offer-card {
+
+        width: 100%;
+
+        min-height: 310px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 13px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .offer-content,
+    .offer-large .offer-content,
+    .offer-small .offer-content {
+
+        width: 100%;
+
+        max-width: 390px;
+
+        padding: 35px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    /* =====================================
+       TAG
+    ===================================== */
+
+    .offer-tag {
+
+        min-height: 30px;
+
+        padding: 0 16px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .offer-card h3,
+    .offer-small h3 {
+
+        max-width: 330px;
+
+        margin: 15px auto 12px;
+
+        font-size: 25px;
+
+        line-height: 1.18;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .offer-card p,
+    .offer-small p {
+
+        max-width: 340px;
+
+        margin: 0 auto;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       BUTTON
+    ===================================== */
+
+    .offer-button {
+
+        width: 125px;
+
+        height: 36px;
+
+        margin-top: 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .offer-image {
+
+        position: absolute;
+
+        opacity: 0.16;
+
+        z-index: 1;
+    }
+
+
+    .offer-card-1 .offer-image {
+
+        right: -20px;
+
+        bottom: -95px;
+
+        width: 55%;
+
+        height: 75%;
+    }
+
+
+    .offer-card-2 .offer-image {
+
+        left: -40px;
+
+        bottom: -90px;
+
+        width: 55%;
+
+        height: 75%;
+    }
+
+
+    .offer-card-4 .offer-image {
+
+        right: -15px;
+
+        bottom:-60px;
+
+        width: 65%;
+
+        height: 70%;
+    }
+
+
+    /* KEEP CONTENT ABOVE IMAGE */
+
+    .offer-card .offer-content {
+
+        position: relative;
+
+        z-index: 5;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .medical-offers-container {
+
+        width: calc(100% - 14px);
+
+        gap: 13px;
+    }
+
+
+    .offer-card {
+
+        min-height: 300px;
+
+        border-radius: 12px;
+    }
+
+
+    .offer-content,
+    .offer-large .offer-content,
+    .offer-small .offer-content {
+
+        padding: 30px 16px;
+    }
+
+
+    .offer-card h3,
+    .offer-small h3 {
+
+        max-width: 300px;
+
+        font-size: 23px;
+    }
+
+
+    .offer-card p,
+    .offer-small p {
+
+        max-width: 300px;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .offer-button {
+
+        width: 120px;
+
+        height: 35px;
+    }
+
+}
+
+
+/* =========================================
+   MEDICAL ABOUT SECTION
+========================================= */
+
+.medical-about-section {
+
+    width: 100%;
+
+    padding: 85px 0 95px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.medical-about-container {
+
+    width: min(1250px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    column-gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.medical-about-content {
+
+    width: 100%;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.medical-about-content h2 {
+
+    margin: 0 0 20px;
+
+    max-width: 650px;
+
+    color: #082f3e;
+
+    font-size: clamp(34px, 3.2vw, 43px);
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   HIGHLIGHT PARAGRAPH
+========================================= */
+
+.about-highlight {
+
+    max-width: 650px;
+
+    margin: 0 0 20px;
+
+    color: #082f3e;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-description {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #71858d;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.about-features {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin-top: 38px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px;
+}
+
+
+/* =========================================
+   FEATURE
+========================================= */
+
+.about-feature {
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   FEATURE HEADING
+========================================= */
+
+.feature-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+
+    flex: 0 0 41px;
+
+    width: 41px;
+
+    height: 41px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2995a8;
+}
+
+
+.feature-icon .material-symbols-outlined {
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+/* =========================================
+   FEATURE TITLE
+========================================= */
+
+.feature-heading h3 {
+
+    margin: 0;
+
+    color: #082f3e;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================
+   FEATURE LINE
+========================================= */
+
+.feature-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 14px 0 16px;
+
+    background: #c7c7c7;
+}
+
+
+/* =========================================
+   FEATURE DESCRIPTION
+========================================= */
+
+.about-feature p {
+
+    margin: 0;
+
+    color: #71858d;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.about-button {
+
+    width: 164px;
+
+    height: 42px;
+
+    margin-top: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #2995a8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.about-button:hover {
+
+    background: #082f3e;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(8, 47, 62, 0.18);
+}
+
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.medical-about-image {
+
+    width: 100%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    opacity: 1;
+}
+
+
+.medical-about-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .medical-about-container {
+
+        width: 92%;
+
+        column-gap: 40px;
+    }
+
+
+    .medical-about-content h2 {
+
+        font-size: 35px;
+    }
+
+
+    .about-features {
+
+        gap: 25px;
+    }
+
+
+    .feature-heading {
+
+        gap: 10px;
+    }
+
+
+    .feature-heading h3 {
+
+        font-size: 18px;
+    }
+
+
+    .medical-about-image {
+
+        height: 440px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .medical-about-section {
+
+        padding: 60px 0 65px;
+
+        overflow: hidden;
+    }
+
+
+    .medical-about-container {
+
+        width: calc(100% - 20px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .medical-about-content {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .medical-about-content h2 {
+
+        width: 100%;
+
+        max-width: 550px;
+
+        margin-bottom: 22px;
+
+        font-size: 32px;
+
+        line-height: 1.17;
+
+        letter-spacing: -1px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       HIGHLIGHT
+    ===================================== */
+
+    .about-highlight {
+
+        width: 100%;
+
+        max-width: 520px;
+
+        margin-bottom: 20px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .about-description {
+
+        width: 100%;
+
+        max-width: 520px;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       FEATURES
+    ===================================== */
+
+    .about-features {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin-top: 35px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 32px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       FEATURE
+    ===================================== */
+
+    .about-feature {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* =====================================
+       FEATURE HEADING
+    ===================================== */
+
+    .feature-heading {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 13px;
+    }
+
+
+    .feature-icon {
+
+        flex: 0 0 45px;
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    .feature-icon .material-symbols-outlined {
+
+        font-size: 22px;
+    }
+
+
+    .feature-heading h3 {
+
+        font-size: 22px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       LINE
+    ===================================== */
+
+    .feature-line {
+
+        width: 85%;
+
+        max-width: 380px;
+
+        margin: 14px auto 15px;
+    }
+
+
+    /* =====================================
+       FEATURE TEXT
+    ===================================== */
+
+    .about-feature p {
+
+        width: 100%;
+
+        max-width: 390px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       BUTTON
+    ===================================== */
+
+    .about-button {
+
+        width: 165px;
+
+        height: 44px;
+
+        margin-top: 38px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .medical-about-image {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        height: 390px;
+
+        border-radius: 14px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .medical-about-section {
+
+        padding: 50px 0 55px;
+    }
+
+
+    .medical-about-container {
+
+        width: calc(100% - 14px);
+
+        gap: 35px;
+    }
+
+
+    /* HEADING */
+
+    .medical-about-content h2 {
+
+        max-width: 350px;
+
+        font-size: 29px;
+
+        line-height: 1.18;
+    }
+
+
+    /* HIGHLIGHT */
+
+    .about-highlight {
+
+        max-width: 335px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* DESCRIPTION */
+
+    .about-description {
+
+        max-width: 335px;
+
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    /* FEATURES */
+
+    .about-features {
+
+        margin-top: 30px;
+
+        gap: 28px;
+    }
+
+
+    .feature-heading h3 {
+
+        font-size: 20px;
+    }
+
+
+    .feature-icon {
+
+        flex-basis: 43px;
+
+        width: 43px;
+
+        height: 43px;
+    }
+
+
+    .about-feature p {
+
+        max-width: 315px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    /* IMAGE */
+
+    .medical-about-image {
+
+        height: 310px;
+
+        border-radius: 12px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    .medical-about-content h2 {
+
+        font-size: 27px;
+    }
+
+
+    .about-highlight {
+
+        font-size: 12px;
+    }
+
+
+    .about-description {
+
+        font-size: 12px;
+    }
+
+
+    .feature-heading h3 {
+
+        font-size: 19px;
+    }
+
+
+    .medical-about-image {
+
+        height: 280px;
+    }
+
+}
+
+
+/* =========================================
+   FEATURED PRODUCTS
+========================================= */
+
+.featured-products-section {
+
+    width: 100%;
+
+    padding: 75px 0 80px;
+
+    background: #edf7f8;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.featured-products-container {
+
+    width: min(1250px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.featured-products-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.featured-products-header h2 {
+
+    margin: 0 0 12px;
+
+    color: #082f3e;
+
+    font-size: 40px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    letter-spacing: -1.2px;
+}
+
+.featured-products-header p {
+
+    max-width: 780px;
+
+    margin: 0 auto;
+
+    color: #71858d;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
+
+.products-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 20px rgba(15, 70, 80, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(15, 70, 80, 0.10);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.product-image {
+
+    width: 100%;
+
+    height: 265px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 18px;
+
+    overflow: hidden;
+}
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.product-content {
+
+    padding: 0 26px 26px;
+}
+
+.product-content h3 {
+
+    margin: 0 0 10px;
+
+    color: #082f3e;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.product-price {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 14px;
+}
+
+.product-price del {
+
+    color: #999999;
+
+    font-size: 12px;
+}
+
+.product-price strong {
+
+    color: #082f3e;
+
+    font-size: 13px;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+.add-cart-btn {
+
+    width: 115px;
+
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: #2995a8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.add-cart-btn:hover {
+
+    background: #082f3e;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.view-products-btn {
+
+    width: 184px;
+
+    height: 40px;
+
+    margin: 30px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #2995a8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.view-products-btn:hover {
+
+    background: #082f3e;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px rgba(8, 47, 62, 0.16);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .featured-products-section {
+
+        padding: 60px 0 65px;
+    }
+
+    .featured-products-container {
+
+        width: calc(100% - 20px);
+    }
+
+
+    /* HEADER */
+
+    .featured-products-header {
+
+        margin-bottom: 28px;
+    }
+
+    .featured-products-header h2 {
+
+        font-size: 32px;
+
+        line-height: 1.15;
+    }
+
+    .featured-products-header p {
+
+        max-width: 360px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GRID */
+
+    .products-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
+    }
+
+
+    /* CARD */
+
+    .product-card {
+
+        width: 100%;
+
+        max-width: 390px;
+    }
+
+
+    /* IMAGE */
+
+    .product-image {
+
+        height: 250px;
+
+        padding: 20px;
+    }
+
+
+    /* CONTENT */
+
+    .product-content {
+
+        padding: 0 24px 25px;
+
+        text-align: center;
+    }
+
+
+    .product-content h3 {
+
+        font-size: 20px;
+    }
+
+
+    .product-price {
+
+        justify-content: center;
+    }
+
+
+    .add-cart-btn {
+
+        margin: 0 auto;
+    }
+
+
+    .view-products-btn {
+
+        width: 180px;
+
+        height: 42px;
+
+        margin-top: 28px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .featured-products-container {
+
+        width: calc(100% - 14px);
+    }
+
+    .featured-products-header h2 {
+
+        font-size: 29px;
+    }
+
+    .featured-products-header p {
+
+        max-width: 320px;
+
+        font-size: 12px;
+    }
+
+    .product-card {
+
+        max-width: 360px;
+    }
+
+    .product-image {
+
+        height: 230px;
+    }
+
+    .product-content h3 {
+
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-choose-section {
+
+    width: 100%;
+
+    padding: 75px 0 95px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.why-choose-container {
+
+    width: min(1250px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.why-choose-header {
+
+    max-width: 800px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.why-choose-header h2 {
+
+    margin: 0 0 18px;
+
+    color: #082f3e;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.3px;
+}
+
+
+.why-choose-header p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #71858d;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.why-choose-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 55px;
+}
+
+
+/* =========================================
+   ITEM
+========================================= */
+
+.why-item {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CIRCULAR IMAGE
+========================================= */
+
+.why-image {
+
+    width: 182px;
+
+    height: 182px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #edf7f8;
+
+    flex-shrink: 0;
+
+    transform-origin: center center;
+
+    will-change: transform, opacity;
+}
+
+
+.why-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.why-content {
+
+    margin-top: 23px;
+
+    opacity: 1;
+}
+
+
+.why-content h3 {
+
+    margin: 0 0 10px;
+
+    color: #082f3e;
+
+    font-size: 19px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+.why-content p {
+
+    max-width: 220px;
+
+    margin: 0 auto;
+
+    color: #71858d;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .why-choose-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 50px;
+
+        column-gap: 30px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .why-choose-section {
+
+        padding: 60px 0 70px;
+    }
+
+
+    .why-choose-container {
+
+        width: calc(100% - 20px);
+    }
+
+
+    /* HEADER */
+
+    .why-choose-header {
+
+        margin-bottom: 40px;
+    }
+
+
+    .why-choose-header h2 {
+
+        font-size: 34px;
+
+        line-height: 1.15;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .why-choose-header p {
+
+        max-width: 390px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GRID */
+
+    .why-choose-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 48px;
+    }
+
+
+    /* ITEM */
+
+    .why-item {
+
+        width: 100%;
+
+        max-width: 380px;
+    }
+
+
+    /* CIRCLE */
+
+    .why-image {
+
+        width: 185px;
+
+        height: 185px;
+    }
+
+
+    /* CONTENT */
+
+    .why-content {
+
+        margin-top: 20px;
+    }
+
+
+    .why-content h3 {
+
+        font-size: 23px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .why-content p {
+
+        max-width: 330px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .why-choose-section {
+
+        padding: 50px 0 60px;
+    }
+
+
+    .why-choose-container {
+
+        width: calc(100% - 14px);
+    }
+
+
+    .why-choose-header h2 {
+
+        font-size: 30px;
+    }
+
+
+    .why-choose-header p {
+
+        max-width: 330px;
+
+        font-size: 12px;
+    }
+
+
+    .why-image {
+
+        width: 165px;
+
+        height: 165px;
+    }
+
+
+    .why-content h3 {
+
+        font-size: 21px;
+    }
+
+
+    .why-content p {
+
+        max-width: 310px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* =========================================
+   HEALTH MARQUEE
+========================================= */
+
+.health-marquee-section {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 145px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================
+   COMMON STRIP
+========================================= */
+
+.marquee-strip {
+
+    position: absolute;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TOP STRIP
+========================================= */
+
+.marquee-strip-top {
+
+    top: 42px;
+
+    background: #36c4ca;
+
+    transform: rotate(3deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   BOTTOM STRIP
+========================================= */
+
+.marquee-strip-bottom {
+
+    top: 55px;
+
+    background: #172243;
+
+    transform: rotate(-2.5deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   TRACK
+========================================= */
+
+.marquee-track {
+
+    display: flex;
+
+    align-items: center;
+
+    width: max-content;
+
+    height: 100%;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.marquee-track span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   RIGHT MOVEMENT
+========================================= */
+
+.marquee-track-right {
+
+    animation:
+        marqueeRight 22s linear infinite;
+}
+
+
+/* =========================================
+   LEFT MOVEMENT
+========================================= */
+
+.marquee-track-left {
+
+    animation:
+        marqueeLeft 22s linear infinite;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes marqueeRight {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes marqueeLeft {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .health-marquee-section {
+
+        height: 105px;
+    }
+
+
+    .marquee-strip {
+
+        height: 40px;
+
+        left: -10%;
+
+        width: 120%;
+    }
+
+
+    .marquee-strip-top {
+
+        top: 30px;
+
+        transform: rotate(3deg);
+    }
+
+
+    .marquee-strip-bottom {
+
+        top: 40px;
+
+        transform: rotate(-3deg);
+    }
+
+
+    .marquee-track span {
+
+        padding: 0 22px;
+
+        font-size: 15px;
+    }
+
+
+    .marquee-track-right {
+
+        animation-duration: 18s;
+    }
+
+
+    .marquee-track-left {
+
+        animation-duration: 18s;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .health-marquee-section {
+
+        height: 95px;
+    }
+
+
+    .marquee-strip {
+
+        height: 36px;
+    }
+
+
+    .marquee-strip-top {
+
+        top: 28px;
+    }
+
+
+    .marquee-strip-bottom {
+
+        top: 27px;
+    }
+
+
+    .marquee-track span {
+
+        padding: 0 18px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MEDICAL TEAM SECTION
+========================================================= */
+
+.medical-team-section {
+    width: 100%;
+    padding: 75px 0 85px;
+    background: #ffffff;
+    overflow: hidden;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+.medical-team-section *,
+.medical-team-section *::before,
+.medical-team-section *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.medical-team-container {
+    width: min(1190px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.medical-team-header {
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.team-label {
+    width: fit-content;
+    min-height: 31px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #ccd9df;
+    border-radius: 30px;
+
+    color: #1b294b;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.team-label span {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #35c3ce;
+}
+
+
+/* =========================================================
+   HEADING ROW
+========================================================= */
+
+.team-heading-row {
+    width: 100%;
+    margin-top: 17px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.team-heading-content {
+    min-width: 0;
+}
+
+.team-heading-content h2 {
+    margin: 0 0 15px;
+
+    color: #182448;
+    font-size: 38px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -1.1px;
+}
+
+.team-heading-content p {
+    max-width: 620px;
+    margin: 0;
+
+    color: #8791b0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   ALL TEAM BUTTON - NO ARROW
+========================================================= */
+
+.all-team-btn {
+    width: 180px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 24px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #35c3ce;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.all-team-btn:hover {
+    background: #182448;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* Remove arrow/icon completely */
+
+.all-team-btn i {
+    display: none !important;
+}
+
+/* =========================================================
+   TEAM GRID
+========================================================= */
+
+.medical-team-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.doctor-card {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    text-align: left;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.doctor-image-wrap {
+    position: relative;
+
+    width: 100%;
+    height: 338px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+    background: #edf5f6;
+
+    isolation: isolate;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DOCTOR IMAGE
+========================================================= */
+
+.doctor-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    /*
+       Slightly enlarge the image so source-image
+       side gaps/empty edges are cropped.
+    */
+    transform: scale(1.07);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.4s ease;
+}
+
+.doctor-card:hover .doctor-image {
+    transform: scale(1.11);
+}
+
+
+/* =========================================================
+   SOCIAL ICON PANEL
+========================================================= */
+
+.doctor-socials {
+    position: absolute;
+
+    top: 70px;
+    right: 0;
+
+    width: 50px;
+
+    padding: 12px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    background: #35c3ce;
+
+    border-radius: 7px 0 0 7px;
+
+    z-index: 20;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+.doctor-card:hover .doctor-socials,
+.doctor-image-wrap:hover .doctor-socials {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.doctor-socials a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.doctor-socials a:hover {
+    background: #182448;
+    color: #ffffff;
+
+    transform: scale(1.12);
+}
+
+
+/* =========================================================
+   HOVER DOT
+========================================================= */
+
+.doctor-hover-dot {
+    position: absolute;
+
+    top: 15px;
+    right: 70px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #35c3ce;
+    border-radius: 50%;
+
+    z-index: 15;
+
+    opacity: 0;
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.doctor-card:hover .doctor-hover-dot {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   DOCTOR INFO
+========================================================= */
+
+.doctor-info {
+    width: 100%;
+    padding-top: 17px;
+}
+
+.doctor-info h3 {
+    margin: 0 0 5px;
+
+    color: #0d1429;
+
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.doctor-info p {
+    margin: 0;
+
+    color: #8791b0;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .medical-team-container {
+        width: min(900px, calc(100% - 40px));
+    }
+
+    .medical-team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 20px;
+    }
+
+    .doctor-image-wrap {
+        height: 390px;
+    }
+
+    .doctor-image {
+        transform: scale(1.06);
+    }
+
+    .doctor-card:hover .doctor-image {
+        transform: scale(1.10);
+    }
+}
+
+/* =========================================================
+   MOBILE - FRESH FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* SECTION */
+
+    .medical-team-section {
+        width: 100%;
+        padding: 60px 0 65px;
+        overflow: hidden;
+    }
+
+
+    /* CONTAINER */
+
+    .medical-team-container {
+        width: calc(100% - 24px);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .medical-team-header {
+        width: 100%;
+        margin-bottom: 38px;
+        text-align: center;
+    }
+
+    .team-label {
+        margin: 0 auto;
+    }
+
+    .team-heading-row {
+        width: 100%;
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+    .team-heading-content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .team-heading-content h2 {
+        width: 100%;
+        max-width: 450px;
+
+        margin: 0 0 15px;
+
+        color: #182448;
+
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 700;
+
+        text-align: center;
+    }
+
+    .team-heading-content p {
+        width: 100%;
+        max-width: 430px;
+
+        margin: 0;
+
+        color: #8791b0;
+
+        font-size: 13px;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       ALL TEAM BUTTON
+    ===================================================== */
+
+    .all-team-btn {
+        width: 185px;
+        height: 45px;
+    }
+
+
+    /* =====================================================
+       GRID
+    ===================================================== */
+
+    .medical-team-grid {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 38px;
+    }
+
+
+    /* =====================================================
+       CARD
+    ===================================================== */
+
+    .doctor-card {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       IMAGE CONTAINER
+    ===================================================== */
+
+    .doctor-image-wrap {
+        position: relative;
+
+        width: 100%;
+        height: 390px;
+
+        margin: 0 auto;
+
+        overflow: hidden;
+
+        border-radius: 15px;
+
+        background: #edf5f6;
+
+        isolation: isolate;
+    }
+
+
+    /* =====================================================
+       IMAGE - IMPORTANT FIX
+    ===================================================== */
+
+    .doctor-image {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        /*
+           This removes the blank/right-side
+           area present in some source images.
+        */
+        object-position: center center;
+
+        transform: scale(1.25);
+
+        transform-origin: center center;
+
+        transition: transform 0.45s ease;
+    }
+
+
+    /*
+       Keep every card identical.
+    */
+
+    .doctor-card:hover .doctor-image {
+        transform: scale(1.25);
+    }
+
+
+    /* =====================================================
+       SOCIAL PANEL
+    ===================================================== */
+
+    .doctor-socials {
+        position: absolute;
+
+        top: 65px;
+        right: 0;
+
+        width: 48px;
+
+        padding: 11px 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        background: #35c3ce;
+
+        border-radius: 7px 0 0 7px;
+
+        z-index: 30;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.4s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+
+    /* Desktop hover + mobile tap */
+
+    .doctor-card:hover .doctor-socials,
+    .doctor-image-wrap:hover .doctor-socials,
+    .doctor-card.social-open .doctor-socials {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+
+    /* =====================================================
+       SOCIAL ICONS
+    ===================================================== */
+
+    .doctor-socials a {
+        width: 28px;
+        height: 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .doctor-socials a:hover {
+        background: #182448;
+        color: #ffffff;
+
+        transform: scale(1.1);
+    }
+
+
+    /* =====================================================
+       DOCTOR INFO
+    ===================================================== */
+
+    .doctor-info {
+        width: 100%;
+
+        padding-top: 15px;
+
+        text-align: center;
+    }
+
+    .doctor-info h3 {
+        margin: 0 0 5px;
+
+        color: #0d1429;
+
+        font-size: 21px;
+        line-height: 1.25;
+        font-weight: 700;
+    }
+
+    .doctor-info p {
+        margin: 0;
+
+        color: #8791b0;
+
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .medical-team-container {
+        width: calc(100% - 20px);
+        max-width: 350px;
+    }
+
+
+    /* HEADER */
+
+    .team-heading-content h2 {
+        width: 100%;
+        max-width: 350px;
+
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .team-heading-content p {
+        width: 100%;
+        max-width: 335px;
+
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    /* CARD */
+
+    .doctor-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* IMAGE */
+
+    .doctor-image-wrap {
+        width: 100%;
+        height: 350px;
+
+        border-radius: 14px;
+    }
+
+
+    /*
+       Extra crop for source images
+       that have blank space on right.
+    */
+
+    .doctor-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        transform: scale(1.35);
+    }
+
+    .doctor-card:hover .doctor-image {
+        transform: scale(1.25);
+    }
+
+
+    /* SOCIAL */
+
+    .doctor-socials {
+        top: 60px;
+        right: 0;
+
+        width: 46px;
+    }
+
+
+    /* INFO */
+
+    .doctor-info {
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .doctor-info h3 {
+        font-size: 20px;
+    }
+
+    .doctor-info p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .medical-team-container {
+        width: calc(100% - 16px);
+        max-width: 330px;
+    }
+
+    .doctor-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .doctor-image-wrap {
+        width: 100%;
+        height: 330px;
+    }
+
+    .doctor-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        transform: scale(1.25);
+    }
+
+    .doctor-card:hover .doctor-image {
+        transform: scale(1.25);
+    }
+
+    .team-heading-content h2 {
+        font-size: 27px;
+    }
+
+    .doctor-info h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE APP SECTION
+========================================================= */
+
+.mobile-app-section {
+    width: 100%;
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+
+    /*
+       Same type of geometric blue background
+       as your screenshot.
+    */
+
+    background:
+        linear-gradient(
+            145deg,
+            #e9f8fc 0%,
+            #d8f0f8 28%,
+            #a8d7e8 58%,
+            #4d9fbe 100%
+        );
+}
+
+
+/* =========================================================
+   GEOMETRIC BACKGROUND
+========================================================= */
+
+.mobile-app-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            32deg,
+            transparent 0 42%,
+            rgba(255,255,255,0.35) 42.1% 42.3%,
+            transparent 42.4%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 0 63%,
+            rgba(255,255,255,0.28) 63.1% 63.3%,
+            transparent 63.4%
+        ),
+        linear-gradient(
+            18deg,
+            transparent 0 74%,
+            rgba(255,255,255,0.25) 74.1% 74.3%,
+            transparent 74.4%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.mobile-app-container {
+    width: min(1200px, 92%);
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   LEFT PHONE AREA
+========================================================= */
+
+.mobile-app-visual {
+    width: 48%;
+    height: 100%;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.mobile-phone {
+    position: absolute;
+
+    width: 190px;
+
+    will-change: transform, opacity;
+}
+
+.mobile-phone img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 15px 18px rgba(0, 45, 65, 0.18));
+}
+
+
+/* =========================================================
+   FIRST PHONE
+========================================================= */
+
+.phone-one {
+    left: 24%;
+    bottom: -20px;
+
+    transform: rotate(-10deg);
+}
+
+
+/* =========================================================
+   SECOND PHONE
+========================================================= */
+
+.phone-two {
+    left: 51%;
+    top: 20px;
+
+    transform: rotate(9deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.mobile-app-content {
+    width: 52%;
+    max-width: 600px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.mobile-app-content h2 {
+    margin: 0 0 18px;
+
+    color: #062f4a;
+
+    font-size: 38px;
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.mobile-app-content p {
+    max-width: 590px;
+
+    margin: 0;
+
+    color: #718b9a;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   APP BUTTONS
+========================================================= */
+
+.mobile-app-buttons {
+    margin-top: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   STORE BUTTON
+========================================================= */
+
+.app-store-btn {
+    display: block;
+
+    width: 173px;
+    height: 50px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.app-store-btn img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.app-store-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 45, 65, 0.18);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .mobile-app-section {
+        height: 400px;
+    }
+
+    .mobile-app-container {
+        width: 94%;
+        gap: 25px;
+    }
+
+    .mobile-phone {
+        width: 165px;
+    }
+
+    .phone-one {
+        left: 18%;
+    }
+
+    .phone-two {
+        left: 49%;
+    }
+
+    .mobile-app-content h2 {
+        font-size: 32px;
+    }
+
+    .mobile-app-content p {
+        font-size: 12px;
+    }
+
+    .app-store-btn {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .mobile-app-section {
+        width: 100%;
+        height: auto;
+
+        min-height: 720px;
+
+        padding: 55px 0 60px;
+    }
+
+
+    .mobile-app-container {
+        width: calc(100% - 30px);
+
+        height: auto;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 35px;
+    }
+
+
+    /* =====================================================
+       PHONE AREA
+    ===================================================== */
+
+    .mobile-app-visual {
+        width: 100%;
+        height: 365px;
+
+        max-width: 430px;
+
+        margin: 0 auto;
+
+        position: relative;
+    }
+
+
+    .mobile-phone {
+        width: 155px;
+    }
+
+
+    .phone-one {
+        left: 15%;
+
+        bottom: -10px;
+
+        transform: rotate(-9deg);
+    }
+
+
+    .phone-two {
+        left: 48%;
+
+        top: 0;
+
+        transform: rotate(8deg);
+
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .mobile-app-content {
+        width: 100%;
+        max-width: 500px;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .mobile-app-content h2 {
+        max-width: 450px;
+
+        margin-bottom: 16px;
+
+        font-size: 30px;
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+
+        text-align: center;
+    }
+
+
+    .mobile-app-content p {
+        max-width: 430px;
+
+        font-size: 13px;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       APP BUTTONS
+    ===================================================== */
+
+    .mobile-app-buttons {
+        margin-top: 25px;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .app-store-btn {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .mobile-app-section {
+        min-height: 680px;
+
+        padding: 45px 0 50px;
+    }
+
+
+    .mobile-app-container {
+        width: calc(100% - 20px);
+
+        gap: 25px;
+    }
+
+
+    .mobile-app-visual {
+        height: 330px;
+    }
+
+
+    .mobile-phone {
+        width: 140px;
+    }
+
+
+    .phone-one {
+        left: 11%;
+        bottom: -5px;
+    }
+
+
+    .phone-two {
+        left: 48%;
+        top: 0;
+    }
+
+
+    .mobile-app-content h2 {
+        max-width: 350px;
+
+        font-size: 27px;
+    }
+
+
+    .mobile-app-content p {
+        max-width: 340px;
+
+        font-size: 12px;
+    }
+
+
+    .mobile-app-buttons {
+        gap: 10px;
+    }
+
+
+    .app-store-btn {
+        width: 140px;
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .mobile-app-visual {
+        height: 300px;
+    }
+
+    .mobile-phone {
+        width: 125px;
+    }
+
+    .phone-one {
+        left: 10%;
+    }
+
+    .phone-two {
+        left: 48%;
+    }
+
+    .mobile-app-content h2 {
+        font-size: 25px;
+    }
+
+    .mobile-app-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .app-store-btn {
+        width: 155px;
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   LAB VIDEO SECTION
+========================================================= */
+
+.lab-video-section {
+    width: 100%;
+    padding: 75px 0 80px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+.lab-video-section *,
+.lab-video-section *::before,
+.lab-video-section *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lab-video-container {
+    width: min(1000px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 47% 53%;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LEFT IMAGE AREA
+========================================================= */
+
+.lab-video-images {
+    position: relative;
+
+    width: 100%;
+    height: 470px;
+}
+
+
+/* =========================================================
+   TURQUOISE BLOCK
+========================================================= */
+
+.lab-blue-block {
+    position: absolute;
+
+    left: 55px;
+    top: 78px;
+
+    width: 255px;
+    height: 150px;
+
+    background: #08a8cf;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.lab-main-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 82%;
+    height: 305px;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+.lab-main-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SMALL IMAGE
+========================================================= */
+
+.lab-small-image {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 76%;
+    height: 212px;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+.lab-small-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.lab-play-btn {
+    position: absolute;
+
+    top: 188px;
+    left: 55%;
+
+    width: 66px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #08a8cf;
+
+    border: 6px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    z-index: 10;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.lab-play-btn i {
+    margin-left: 3px;
+}
+
+
+.lab-play-btn:hover {
+    background: #082f3e;
+
+    transform: translate(-50%, -50%) scale(1.08);
+
+    box-shadow:
+        0 8px 25px rgba(8, 47, 62, 0.25);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.lab-video-content {
+    width: 100%;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.lab-small-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #08a8cf;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.lab-small-title span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #08a8cf;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.lab-video-content h2 {
+    margin: 0 0 15px;
+
+    color: #071536;
+
+    font-size: 34px;
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.lab-video-content h2 strong {
+    display: block;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lab-description {
+    margin: 0 0 17px;
+
+    color: #6e788c;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.lab-highlight {
+    margin: 0 0 24px;
+
+    color: #18213c;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.lab-features {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.lab-feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+
+.lab-feature-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #08a8cf;
+}
+
+
+.lab-feature-icon .material-symbols-outlined {
+    font-size: 40px;
+
+    font-weight: 300;
+}
+
+
+.lab-feature h3 {
+    margin: 0 0 7px;
+
+    color: #071536;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.lab-feature p {
+    max-width: 145px;
+
+    margin: 0;
+
+    color: #6e788c;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.lab-contact {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.lab-call h3 {
+    margin: 0 0 3px;
+
+    color: #071536;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.lab-call a {
+    color: #08a8cf;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.lab-team-images {
+    display: flex;
+
+    align-items: center;
+
+    padding-right: 5px;
+}
+
+
+.lab-team-images img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid #ffffff;
+
+    margin-left: -8px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .lab-video-container {
+        width: 92%;
+
+        grid-template-columns: 48% 52%;
+
+        gap: 20px;
+    }
+
+    .lab-video-images {
+        height: 430px;
+    }
+
+    .lab-main-image {
+        height: 280px;
+    }
+
+    .lab-small-image {
+        height: 195px;
+    }
+
+    .lab-video-content h2 {
+        font-size: 30px;
+    }
+
+    .lab-feature h3 {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .lab-video-section {
+        padding: 60px 0 65px;
+    }
+
+
+    .lab-video-container {
+        width: calc(100% - 24px);
+
+        max-width: 500px;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+
+    /* =====================================================
+       IMAGE AREA
+    ===================================================== */
+
+    .lab-video-images {
+        width: 100%;
+
+        max-width: 450px;
+
+        height: 400px;
+    }
+
+
+    .lab-blue-block {
+        left: 35px;
+        top: 65px;
+
+        width: 220px;
+        height: 135px;
+    }
+
+
+    .lab-main-image {
+        top: 0;
+        right: 0;
+
+        width: 83%;
+        height: 270px;
+    }
+
+
+    .lab-small-image {
+        left: 0;
+        bottom: 0;
+
+        width: 78%;
+        height: 190px;
+    }
+
+
+    .lab-play-btn {
+        top: 166px;
+        left: 55%;
+
+        width: 62px;
+        height: 62px;
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .lab-video-content {
+        width: 100%;
+
+        padding: 0;
+
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .lab-small-title {
+        justify-content: center;
+    }
+
+
+    .lab-video-content h2 {
+        max-width: 500px;
+
+        margin-bottom: 17px;
+
+        font-size: 30px;
+
+        line-height: 1.18;
+
+        text-align: center;
+    }
+
+
+    .lab-video-content h2 strong {
+        display: inline;
+    }
+
+
+    .lab-description {
+        max-width: 450px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    .lab-highlight {
+        max-width: 450px;
+
+        font-size: 13px;
+
+        text-align: center;
+    }
+
+
+    /* FEATURES */
+
+    .lab-features {
+        width: 100%;
+
+        max-width: 450px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        text-align: left;
+    }
+
+
+    .lab-feature {
+        gap: 8px;
+    }
+
+
+    .lab-feature-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .lab-feature-icon .material-symbols-outlined {
+        font-size: 34px;
+    }
+
+
+    .lab-feature h3 {
+        font-size: 15px;
+    }
+
+
+    .lab-feature p {
+        font-size: 11px;
+    }
+
+
+    /* CONTACT */
+
+    .lab-contact {
+        width: 100%;
+
+        max-width: 450px;
+
+        justify-content: space-between;
+
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .lab-video-section {
+        padding: 50px 0 60px;
+    }
+
+
+    .lab-video-container {
+        width: calc(100% - 20px);
+
+        gap: 35px;
+    }
+
+
+    .lab-video-images {
+        height: 330px;
+    }
+
+
+    .lab-blue-block {
+        left: 25px;
+        top: 55px;
+
+        width: 185px;
+        height: 115px;
+    }
+
+
+    .lab-main-image {
+        width: 84%;
+        height: 225px;
+    }
+
+
+    .lab-small-image {
+        width: 77%;
+        height: 160px;
+    }
+
+
+    .lab-play-btn {
+        top: 139px;
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 17px;
+    }
+
+
+    .lab-video-content h2 {
+        max-width: 350px;
+
+        font-size: 27px;
+    }
+
+
+    .lab-description {
+        max-width: 340px;
+
+        font-size: 12px;
+    }
+
+
+    .lab-highlight {
+        max-width: 340px;
+
+        font-size: 12px;
+    }
+
+
+    .lab-features {
+        gap: 15px;
+    }
+
+
+    .lab-feature {
+        gap: 6px;
+    }
+
+
+    .lab-feature-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .lab-feature-icon .material-symbols-outlined {
+        font-size: 30px;
+    }
+
+
+    .lab-feature h3 {
+        font-size: 14px;
+    }
+
+
+    .lab-feature p {
+        font-size: 10px;
+    }
+
+
+    .lab-contact {
+        gap: 10px;
+    }
+
+
+    .lab-call h3 {
+        font-size: 14px;
+    }
+
+
+    .lab-call a {
+        font-size: 15px;
+    }
+
+
+    .lab-team-images img {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .lab-video-images {
+        height: 300px;
+    }
+
+
+    .lab-main-image {
+        height: 205px;
+    }
+
+
+    .lab-small-image {
+        height: 145px;
+    }
+
+
+    .lab-blue-block {
+        left: 20px;
+        top: 50px;
+
+        width: 165px;
+        height: 105px;
+    }
+
+
+    .lab-play-btn {
+        top: 128px;
+
+        width: 54px;
+        height: 54px;
+    }
+
+
+    .lab-video-content h2 {
+        font-size: 25px;
+    }
+
+
+    .lab-features {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    .lab-feature {
+        justify-content: center;
+    }
+
+
+    .lab-feature p {
+        max-width: 200px;
+    }
+
+
+    .lab-contact {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+}

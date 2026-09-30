@@ -1,0 +1,3576 @@
+/* =========================================
+   STACKLY BLOG HERO
+========================================= */
+
+.stackly-blog-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("../assets/background-hero.webp");
+
+    background-size: cover;
+
+    background-position: center center;
+
+}
+
+
+/* =========================================
+   DARK BLUE OVERLAY
+========================================= */
+
+.blog-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 31, 70, .82),
+            rgba(9, 52, 88, .68)
+        );
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.blog-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.blog-hero-title {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.blog-hero-breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.blog-hero-breadcrumb a {
+
+    color: #36c4ca;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+
+}
+
+
+.blog-hero-breadcrumb a:hover {
+
+    color: #ffffff;
+
+}
+
+
+.blog-hero-breadcrumb span {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   SMALL DECORATIVE CIRCLE
+========================================= */
+
+.blog-hero-content::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+
+    height: 28px;
+
+    border: 1px solid rgba(54, 196, 202, .8);
+
+    border-radius: 50%;
+
+    left: -280px;
+
+    bottom: -65px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-blog-hero {
+
+        height: 390px;
+
+    }
+
+    .blog-hero-title {
+
+        font-size: 52px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-blog-hero {
+
+        height: 350px;
+
+        background-position: center center;
+
+    }
+
+    .blog-hero-title {
+
+        font-size: 42px;
+
+        letter-spacing: -1px;
+
+    }
+
+    .blog-hero-breadcrumb {
+
+        margin-top: 13px;
+
+        font-size: 12px;
+
+        gap: 7px;
+
+    }
+
+    .blog-hero-content::after {
+
+        left: -125px;
+
+        bottom: -45px;
+
+        width: 22px;
+
+        height: 22px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-blog-hero {
+
+        height: 320px;
+
+    }
+
+    .blog-hero-title {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+/* =========================================
+   STACKLY BLOG INTRO
+========================================= */
+
+.stackly-blog-intro {
+    width: 100%;
+    padding: 95px 0 105px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.blog-intro-container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 47% 53%;
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.blog-intro-visual {
+    position: relative;
+
+    width: 100%;
+    height: 470px;
+}
+
+
+/* =========================================
+   BIG IMAGE
+========================================= */
+
+.blog-big-image {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 300px;
+    height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 0 70px 70px 0;
+
+    z-index: 2;
+
+    box-shadow:
+        0 15px 35px rgba(7, 19, 50, .08);
+}
+
+.blog-big-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.blog-big-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   SMALL IMAGE
+========================================= */
+
+.blog-small-image {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 205px;
+    height: 315px;
+
+    overflow: hidden;
+
+    border-radius: 90px;
+
+    z-index: 3;
+
+    box-shadow:
+        0 15px 35px rgba(7, 19, 50, .12);
+}
+
+.blog-small-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.blog-small-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   DOT PATTERN
+========================================= */
+
+.blog-dots {
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    right: 0;
+    top: 15px;
+
+    background-image:
+        radial-gradient(
+            #8bdce5 1.2px,
+            transparent 1.2px
+        );
+
+    background-size: 9px 9px;
+
+    opacity: .8;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   EXPERIENCE BADGE
+========================================= */
+
+.blog-experience-badge {
+    position: absolute;
+
+    top: 48px;
+    left: 235px;
+
+    min-width: 185px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px 15px 7px 7px;
+
+    background: #ffffff;
+
+    border-radius: 45px;
+
+    box-shadow:
+        0 10px 30px rgba(7, 19, 50, .12);
+
+    z-index: 5;
+}
+
+
+/* ICON */
+
+.experience-icon {
+    width: 57px;
+    height: 57px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #08b4b8;
+
+    color: #ffffff;
+}
+
+.experience-icon .material-symbols-outlined {
+    font-size: 31px;
+}
+
+
+/* TEXT */
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10px;
+
+    color: #071332;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+.experience-text strong {
+    font-weight: 800;
+}
+
+.experience-text span {
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.blog-intro-content {
+    width: 100%;
+    max-width: 590px;
+}
+
+
+/* LABEL */
+
+.blog-intro-label {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: #08a9cf;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* HEADING */
+
+.blog-intro-content h2 {
+    margin: 0 0 17px;
+
+    color: #12345d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 31px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -.7px;
+}
+
+.blog-intro-content h2 span {
+    display: inline;
+
+    color: #08a9a8;
+}
+
+
+/* DESCRIPTION */
+
+.blog-intro-description {
+    margin: 0 0 25px;
+
+    color: #68778a;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.blog-intro-features {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 30px;
+
+    row-gap: 17px;
+
+    margin-bottom: 28px;
+}
+
+.blog-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.blog-feature .material-symbols-outlined {
+
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    background: #244b7c;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.blog-feature p {
+    margin: 0;
+
+    color: #173c68;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.blog-discover-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 135px;
+    height: 42px;
+
+    padding: 0 17px;
+
+    border-radius: 6px;
+
+    background: #08b4b8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.blog-discover-btn .material-symbols-outlined {
+    font-size: 17px;
+
+    transition:
+        transform .3s ease;
+}
+
+.blog-discover-btn:hover {
+
+    background: #123b68;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(8, 180, 184, .2);
+}
+
+.blog-discover-btn:hover .material-symbols-outlined {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .stackly-blog-intro {
+        padding: 80px 0 90px;
+    }
+
+    .blog-intro-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .blog-intro-visual {
+        width: 100%;
+        max-width: 570px;
+
+        margin: 0 auto;
+    }
+
+    .blog-intro-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .blog-intro-description {
+        max-width: 650px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-intro-features {
+        text-align: left;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-blog-intro {
+        padding: 65px 0 75px;
+    }
+
+    .blog-intro-container {
+        width: 92%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 48px;
+    }
+
+
+    /* =====================================
+       VISUAL
+    ===================================== */
+
+    .blog-intro-visual {
+
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 390px;
+
+        margin: 0 auto;
+    }
+
+
+    .blog-big-image {
+
+        width: 235px;
+        height: 350px;
+
+        left: 0;
+
+        border-radius: 0 55px 55px 0;
+    }
+
+
+    .blog-small-image {
+
+        width: 155px;
+        height: 245px;
+
+        right: 0;
+        bottom: 0;
+
+        border-radius: 70px;
+    }
+
+
+    .blog-dots {
+
+        width: 90px;
+        height: 90px;
+
+        right: 0;
+        top: 5px;
+
+        background-size: 7px 7px;
+    }
+
+
+    .blog-experience-badge {
+
+        top: 35px;
+        left: 170px;
+
+        min-width: 165px;
+
+        height: 62px;
+
+        padding-right: 10px;
+    }
+
+
+    .experience-icon {
+
+        width: 48px;
+        height: 48px;
+    }
+
+    .experience-icon .material-symbols-outlined {
+        font-size: 25px;
+    }
+
+    .experience-text {
+        font-size: 9px;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .blog-intro-content {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .blog-intro-label {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .blog-intro-content h2 {
+
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+
+    .blog-intro-description {
+
+        font-size: 12px;
+
+        line-height: 1.75;
+
+        margin-bottom: 23px;
+    }
+
+
+    /* FEATURES */
+
+    .blog-intro-features {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        text-align: center;
+
+        margin-bottom: 25px;
+    }
+
+
+    .blog-feature {
+
+        justify-content:flex-start;
+        margin-left: 70px;
+    }
+
+
+    .blog-feature .material-symbols-outlined {
+
+        width: 29px;
+        height: 29px;
+
+        font-size: 17px;
+    }
+
+
+    .blog-feature p {
+
+        font-size: 11px;
+    }
+
+
+    .blog-discover-btn {
+
+        height: 44px;
+
+        min-width: 140px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .blog-intro-visual {
+        height: 355px;
+    }
+
+    .blog-big-image {
+        width: 210px;
+        height: 320px;
+    }
+
+    .blog-small-image {
+        width: 140px;
+        height: 220px;
+    }
+
+    .blog-experience-badge {
+        left: 145px;
+        min-width: 155px;
+    }
+
+    .blog-intro-content h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+
+
+/* =========================================
+   STACKLY STATS SECTION
+========================================= */
+
+.stackly-stats-section {
+    width: 100%;
+    height: 170px;
+    padding: 30px 0;
+    background: #08b5b5;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.stats-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   STAT ITEM
+========================================= */
+
+.stat-item {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.stat-icon {
+    width: 82px;
+    height: 82px;
+
+    min-width: 82px;
+    min-height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #173b70;
+
+    border: 2px solid #ffffff;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .08);
+
+    transition:
+        transform .4s ease,
+        background .3s ease;
+}
+
+
+/* =========================================
+   MATERIAL ICON
+========================================= */
+
+.stat-icon .material-symbols-outlined {
+    display: block;
+
+    font-family: "Material Symbols Outlined" !important;
+
+    font-size: 38px !important;
+
+    line-height: 1 !important;
+
+    color: #ffffff !important;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 0,
+        "opsz" 40;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.stat-item:hover .stat-icon {
+    transform: translateY(-5px) rotate(4deg);
+
+    background: #0d315f;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.stat-content {
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.stat-number {
+    display: flex;
+    align-items: flex-start;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.stat-number sup {
+    position: relative;
+
+    top: 2px;
+
+    margin-left: 2px;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.stat-label {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-container {
+        width: min(700px, 90%);
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 35px;
+
+        row-gap: 30px;
+    }
+
+    .stat-icon {
+        width: 75px;
+        height: 75px;
+
+        min-width: 75px;
+        min-height: 75px;
+    }
+
+    .stat-icon .material-symbols-outlined {
+        font-size: 34px !important;
+    }
+
+    .stat-number {
+        font-size: 34px;
+    }
+
+    .stat-number sup {
+        font-size: 17px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   MOBILE
+   2 ITEMS PER ROW - PERFECTLY CENTERED
+========================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-stats-section {
+        width: 100%;
+        padding: 30px 0;
+        overflow: hidden;
+    }
+
+    .stats-container {
+
+        /* IMPORTANT */
+        width: 100% !important;
+        max-width: 390px !important;
+
+        margin: 0 auto !important;
+
+        padding: 0 12px !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        column-gap: 10px !important;
+        row-gap: 28px !important;
+
+        justify-items: center !important;
+        align-items: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================
+       EACH STAT
+    ===================================== */
+
+    .stat-item {
+
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================
+       ICON
+    ===================================== */
+
+    .stat-icon {
+
+        width: 56px !important;
+        height: 56px !important;
+
+        min-width: 56px !important;
+        min-height: 56px !important;
+
+        flex: 0 0 56px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .stat-icon .material-symbols-outlined {
+
+        display: block !important;
+
+        font-size: 27px !important;
+
+        line-height: 1 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .stat-content {
+
+        min-width: 0 !important;
+
+        flex: 0 1 auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================
+       NUMBER
+    ===================================== */
+
+    .stat-number {
+
+        display: flex !important;
+
+        align-items: flex-start !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 24px !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .stat-number sup {
+
+        top: 1px !important;
+
+        margin-left: 2px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    /* =====================================
+       LABEL
+    ===================================== */
+
+    .stat-label {
+
+        display: block !important;
+
+        margin: 4px 0 0 !important;
+        padding: 0 !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.2 !important;
+
+        white-space: nowrap !important;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   360px AND BELOW
+========================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-stats-section {
+        padding: 28px 0;
+    }
+
+
+    .stats-container {
+
+        width: 100% !important;
+
+        max-width: 350px !important;
+
+        padding: 0 8px !important;
+
+        column-gap: 6px !important;
+
+        row-gap: 24px !important;
+    }
+
+
+    .stat-item {
+
+        gap: 5px !important;
+    }
+
+
+    .stat-icon {
+
+        width: 50px !important;
+        height: 50px !important;
+
+        min-width: 50px !important;
+        min-height: 50px !important;
+
+        flex-basis: 50px !important;
+    }
+
+
+    .stat-icon .material-symbols-outlined {
+
+        font-size: 24px !important;
+    }
+
+
+    .stat-number {
+
+        font-size: 21px !important;
+    }
+
+
+    .stat-number sup {
+
+        font-size: 11px !important;
+    }
+
+
+    .stat-label {
+
+        font-size: 9px !important;
+
+        white-space: nowrap !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   STACKLY PROCESS + PRICING PLANS
+   COMPLETE CSS
+========================================================= */
+
+.stackly-process-plans {
+    position: relative;
+    width: 100%;
+
+    /*
+       BLUE TOP + WHITE LOWER AREA
+       This creates the same effect as your screenshot:
+       blue behind process + pricing heading,
+       white behind lower part of cards.
+    */
+    background:
+        linear-gradient(
+            to bottom,
+            #08a6c8 0,
+            #08a6c8 523px,
+            #ffffff 423px,
+            #ffffff 100%
+        );
+
+    padding: 38px 0 80px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.process-bg-shape {
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: .28;
+}
+
+
+/* LEFT TOP DECORATION */
+
+.process-shape-one {
+    width: 130px;
+    height: 130px;
+
+    left: -75px;
+    top: -65px;
+
+    border: 2px solid rgba(255,255,255,.55);
+
+    transform: rotate(32deg);
+}
+
+
+/* RIGHT DECORATION */
+
+.process-shape-two {
+    width: 150px;
+    height: 150px;
+
+    right: -70px;
+    top: 190px;
+
+    border: 2px solid rgba(255,255,255,.55);
+
+    transform: rotate(32deg);
+}
+
+
+/* =========================================================
+   PROCESS CONTAINER
+========================================================= */
+
+.process-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PROCESS HEADING
+========================================================= */
+
+.process-heading {
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    margin: 0 0 27px;
+}
+
+
+.process-label {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: .2px;
+}
+
+
+.process-heading h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+
+.process-heading h2 strong {
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PROCESS GRID
+========================================================= */
+
+.process-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    column-gap: 18px;
+
+    row-gap: 20px;
+
+    align-items: start;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   PROCESS ITEM
+========================================================= */
+
+.process-item {
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROCESS ICON WRAPPER
+========================================================= */
+
+.process-icon-wrap {
+
+    position: relative;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 10px;
+}
+
+
+/* =========================================================
+   PROCESS ICON CIRCLE
+========================================================= */
+
+.process-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #08a6c8;
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    box-sizing: border-box;
+}
+
+
+.process-icon .material-symbols-outlined {
+
+    display: block;
+
+    font-family: "Material Symbols Outlined" !important;
+
+    font-size: 27px !important;
+
+    line-height: 1 !important;
+
+    color: #08a6c8 !important;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 28;
+}
+
+
+/* =========================================================
+   PROCESS NUMBER
+========================================================= */
+
+.process-number {
+
+    position: absolute;
+
+    top: -4px;
+    right: -1px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #062f59;
+
+    border: 1px solid #ffffff;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+========================================================= */
+
+.process-item h3 {
+
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PROCESS DESCRIPTION
+========================================================= */
+
+.process-item p {
+
+    width: 100%;
+
+    max-width: 180px;
+
+    margin: 0 auto;
+
+    color: rgba(255,255,255,.94);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   PLANS CONTAINER
+========================================================= */
+
+.plans-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1050px, 90%);
+
+    margin: 68px auto 0;
+}
+
+
+/* =========================================================
+   PLANS HEADING
+========================================================= */
+
+.plans-heading {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    margin: 0 0 30px;
+
+    text-align: left;
+
+    color: #ffffff;
+}
+
+
+.plans-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.plans-heading h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+
+.plans-heading h2 strong {
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PLANS GRID
+========================================================= */
+
+.plans-grid {
+
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap: 12px;
+
+    align-items: start;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   COMMON PLAN CARD
+========================================================= */
+
+.plan-card {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 385px;
+
+    background: #f5f5f5;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.13);
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   EXACT STAIR POSITION
+========================================================= */
+
+/*
+   FIRST CARD = lowest
+   SECOND CARD = middle
+   THIRD CARD = highest
+*/
+
+.plan-card-one {
+
+    margin-top: 42px;
+
+    z-index: 1;
+}
+
+
+.plan-card-two {
+
+    margin-top: -5px;
+
+    z-index: 2;
+}
+
+
+.plan-card-three {
+
+    margin-top: -52px;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   PLAN TOP
+========================================================= */
+
+.plan-top {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 107px;
+
+    padding: 25px 15px 0;
+
+    background: #062f59;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+    /*
+       ANGLED BOTTOM
+    */
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 68%,
+        0 100%
+    );
+}
+
+
+/* MIDDLE CARD GRAY */
+
+.plan-card-two .plan-top {
+
+    background: #666666;
+}
+
+
+/* THIRD CARD NAVY */
+
+.plan-card-three .plan-top {
+
+    background: #062f59;
+}
+
+
+/* =========================================================
+   PLAN TITLE
+========================================================= */
+
+.plan-top h3 {
+
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PLAN PRICE
+========================================================= */
+
+.plan-price {
+
+    display: flex;
+
+    align-items: baseline;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.plan-price span {
+
+    margin-right: 2px;
+
+    font-size: 14px;
+}
+
+
+.plan-price small {
+
+    margin-left: 3px;
+
+    font-size: 12px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HEART BUTTON
+========================================================= */
+
+.plan-heart {
+
+    position: absolute;
+
+    top: 51px;
+
+    right: 26px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #08a6c8;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.13);
+
+    z-index: 10;
+
+    box-sizing: border-box;
+}
+
+
+.plan-heart .material-symbols-outlined {
+
+    display: block;
+
+    font-family: "Material Symbols Outlined" !important;
+
+    font-size: 28px !important;
+
+    line-height: 1 !important;
+
+    color: #08a6c8 !important;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 28;
+}
+
+
+/* =========================================================
+   PLAN BODY
+========================================================= */
+
+.plan-body {
+
+    width: 100%;
+
+    padding: 22px 18px 55px;
+
+    background: #f5f5f5;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PLAN LIST
+========================================================= */
+
+.plan-body ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.plan-body li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #17243a;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+.plan-body li .material-symbols-outlined {
+
+    flex-shrink: 0;
+
+    display: block;
+
+    font-family: "Material Symbols Outlined" !important;
+
+    font-size: 13px !important;
+
+    line-height: 1 !important;
+
+    color: #071b38 !important;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 800,
+        "GRAD" 0,
+        "opsz" 20;
+}
+
+
+/* =========================================================
+   PLAN BUTTON
+========================================================= */
+
+.plan-btn {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.plan-btn:hover {
+
+    background: #062f59;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-process-plans {
+
+        background:
+            linear-gradient(
+                to bottom,
+                #08a6c8 0,
+                #08a6c8 500px,
+                #ffffff 500px,
+                #ffffff 100%
+            );
+    }
+
+
+    .process-container,
+    .plans-container {
+
+        width: 92%;
+    }
+
+
+    .process-grid {
+
+        column-gap: 15px;
+    }
+
+
+    .process-item h3 {
+
+        font-size: 13px;
+    }
+
+
+    .process-item p {
+
+        font-size: 8px;
+    }
+
+
+    .plans-grid {
+
+        column-gap: 9px;
+    }
+
+
+    .plan-card-one {
+
+        margin-top: 35px;
+    }
+
+
+    .plan-card-two {
+
+        margin-top: 0;
+    }
+
+
+    .plan-card-three {
+
+        margin-top: -35px;
+    }
+
+
+    .plan-top {
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .plan-top h3 {
+
+        font-size: 12px;
+    }
+
+
+    .plan-price {
+
+        font-size: 18px;
+    }
+
+
+    .plan-heart {
+
+        right: 15px;
+
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .plan-body {
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .plan-body li {
+
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-process-plans {
+
+        padding: 55px 0 75px;
+
+        /*
+           Mobile blue background extends behind
+           process + plans heading.
+        */
+
+        background:
+            linear-gradient(
+                to bottom,
+                #08a6c8 0,
+                #08a6c8 760px,
+                #ffffff 560px,
+                #ffffff 100%
+            );
+    }
+
+
+    .process-container,
+    .plans-container {
+
+        width: 92%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* =====================================================
+       PROCESS HEADING
+    ===================================================== */
+
+    .process-heading {
+
+        margin-bottom: 35px;
+    }
+
+
+    .process-label {
+
+        font-size: 10px;
+    }
+
+
+    .process-heading h2 {
+
+        font-size: 27px;
+    }
+
+
+    /* =====================================================
+       PROCESS
+    ===================================================== */
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .process-item {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .process-icon-wrap {
+
+        margin-bottom: 11px;
+    }
+
+
+    .process-item h3 {
+
+        font-size: 15px;
+    }
+
+
+    .process-item p {
+
+        max-width: 240px;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       PLANS CONTAINER
+    ===================================================== */
+
+    .plans-container {
+
+        margin-top: 60px;
+    }
+
+
+    /* =====================================================
+       PLANS HEADING
+    ===================================================== */
+
+    .plans-heading {
+
+        width: 100%;
+
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+
+
+    .plans-label {
+
+        font-size: 10px;
+    }
+
+
+    .plans-heading h2 {
+
+        font-size: 27px;
+    }
+
+
+    /* =====================================================
+       PLANS GRID
+    ===================================================== */
+
+    .plans-grid {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 28px;
+
+        margin: 0;
+
+        padding: 0;
+    }
+
+
+    /* =====================================================
+       MOBILE CARDS
+    ===================================================== */
+
+    .plan-card {
+
+        width: 100%;
+
+        max-width: 350px;
+
+        min-height: 390px;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        flex-shrink: 0;
+    }
+
+
+    /*
+       No desktop overlapping on mobile.
+       This prevents horizontal/vertical clipping.
+    */
+
+    .plan-card-one,
+    .plan-card-two,
+    .plan-card-three {
+
+        margin-top: 0 !important;
+
+        z-index: auto;
+    }
+
+
+    /* =====================================================
+       MOBILE CARD TOP
+    ===================================================== */
+
+    .plan-top {
+
+        height: 112px;
+
+        padding: 27px 18px 0;
+
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 69%,
+            0 100%
+        );
+    }
+
+
+    .plan-top h3 {
+
+        font-size: 15px;
+    }
+
+
+    .plan-price {
+
+        font-size: 23px;
+    }
+
+
+    .plan-price span {
+
+        font-size: 15px;
+    }
+
+
+    .plan-price small {
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE HEART
+    ===================================================== */
+
+    .plan-heart {
+
+        top: 70px;
+
+        right: 23px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .plan-heart .material-symbols-outlined {
+
+        font-size: 29px !important;
+    }
+
+
+    /* =====================================================
+       MOBILE BODY
+    ===================================================== */
+
+    .plan-body {
+
+        padding: 23px 20px 58px;
+    }
+
+
+    .plan-body ul {
+
+        gap: 12px;
+    }
+
+
+    .plan-body li {
+
+        font-size: 10px;
+
+        white-space: normal;
+
+        line-height: 1.45;
+    }
+
+
+    .plan-body li .material-symbols-outlined {
+
+        font-size: 14px !important;
+    }
+
+
+    /* =====================================================
+       MOBILE BUTTON
+    ===================================================== */
+
+    .plan-btn {
+
+        height: 45px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-process-plans {
+
+        padding-top: 50px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                #08a6c8 0,
+                #08a6c8 545px,
+                #ffffff 545px,
+                #ffffff 100%
+            );
+    }
+
+
+    .process-container,
+    .plans-container {
+
+        width: 94%;
+    }
+
+
+    .process-heading h2,
+    .plans-heading h2 {
+
+        font-size: 25px;
+    }
+
+
+    .process-grid {
+
+        gap: 27px;
+    }
+
+
+    .process-item {
+
+        max-width: 270px;
+    }
+
+
+    .process-item h3 {
+
+        font-size: 14px;
+    }
+
+
+    .process-item p {
+
+        font-size: 9px;
+    }
+
+
+    .plans-container {
+
+        margin-top: 55px;
+    }
+
+
+    .plans-grid {
+
+        gap: 25px;
+    }
+
+
+    .plan-card {
+
+        max-width: 330px;
+
+        min-height: 380px;
+    }
+
+
+    .plan-top {
+
+        height: 108px;
+
+        padding: 25px 16px 0;
+    }
+
+
+    .plan-top h3 {
+
+        font-size: 14px;
+    }
+
+
+    .plan-price {
+
+        font-size: 21px;
+    }
+
+
+    .plan-heart {
+
+        top: 67px;
+
+        right: 20px;
+
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .plan-body {
+
+        padding: 21px 17px 55px;
+    }
+
+
+    .plan-body li {
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   STACKLY BLOG SECTION
+========================================= */
+
+.stackly-blog-section {
+    width: 100%;
+    padding: 65px 0 80px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.stackly-blog-container {
+    width: min(1080px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.stackly-blog-heading {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.blog-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #08a6c8;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.stackly-blog-heading h2 {
+    margin: 0;
+
+    color: #173b70;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.stackly-blog-heading h2 span {
+    color: #08a6c8;
+}
+
+
+/* =========================================
+   BLOG GRID
+========================================= */
+
+.stackly-blog-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap: 14px;
+
+    row-gap: 15px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   BLOG CARD
+========================================= */
+
+.stackly-blog-card {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.025);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.stackly-blog-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.09);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.blog-image-wrap {
+    position: relative;
+
+    width: calc(100% - 24px);
+
+    height: 155px;
+
+    margin: 12px auto 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #edf7f8;
+}
+
+
+.blog-image-wrap img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .6s ease;
+}
+
+
+.stackly-blog-card:hover .blog-image-wrap img {
+
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.blog-date {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    height: 25px;
+
+    padding: 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    border-radius: 14px 0 0 0;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.blog-date .material-symbols-outlined {
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   META
+========================================= */
+
+.blog-meta {
+
+    width: calc(100% - 24px);
+
+    margin: 9px auto 0;
+
+    padding-bottom: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 13px;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    color: #173b70;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1.2;
+}
+
+
+.blog-meta span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    white-space: nowrap;
+}
+
+
+.blog-meta .material-symbols-outlined {
+
+    font-size: 13px;
+
+    color: #08a6c8;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.blog-content {
+
+    width: calc(100% - 24px);
+
+    margin: 0 auto;
+
+    padding: 10px 0 13px;
+}
+
+
+.blog-content h3 {
+
+    min-height: 37px;
+
+    margin: 0 0 8px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+
+.blog-content p {
+
+    min-height: 35px;
+
+    margin: 0 0 13px;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   READ MORE BUTTON
+   NO ARROW
+========================================= */
+
+.blog-read-btn {
+
+    width: 85px;
+
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.blog-read-btn:hover {
+
+    background: #173b70;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(23,59,112,.18);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-blog-container {
+
+        width: 92%;
+    }
+
+    .stackly-blog-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .blog-image-wrap {
+
+        height: 175px;
+    }
+
+    .blog-content h3 {
+
+        font-size: 13px;
+    }
+
+    .blog-content p {
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-blog-section {
+
+        padding: 50px 0 65px;
+    }
+
+
+    .stackly-blog-container {
+
+        width: 92%;
+
+        max-width: 370px;
+
+        margin: 0 auto;
+    }
+
+
+    /* HEADING */
+
+    .stackly-blog-heading {
+
+        margin-bottom: 28px;
+    }
+
+
+    .blog-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .stackly-blog-heading h2 {
+
+        font-size: 25px;
+
+        line-height: 1.25;
+    }
+
+
+    /* ONE CARD PER ROW */
+
+    .stackly-blog-grid {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .stackly-blog-card {
+
+        width: 100%;
+
+        max-width: 360px;
+
+        margin: 0 auto;
+    }
+
+
+    /* IMAGE */
+
+    .blog-image-wrap {
+
+        width: calc(100% - 24px);
+
+        height: 190px;
+
+        margin-top: 12px;
+    }
+
+
+    /* DATE */
+
+    .blog-date {
+
+        height: 27px;
+
+        padding: 0 11px;
+
+        font-size: 9px;
+    }
+
+
+    /* META */
+
+    .blog-meta {
+
+        width: calc(100% - 24px);
+
+        gap: 16px;
+
+        padding-bottom: 9px;
+
+        font-size: 9px;
+    }
+
+
+    .blog-meta .material-symbols-outlined {
+
+        font-size: 14px;
+    }
+
+
+    /* CONTENT */
+
+    .blog-content {
+
+        width: calc(100% - 24px);
+
+        padding-top: 12px;
+
+        padding-bottom: 15px;
+    }
+
+
+    .blog-content h3 {
+
+        min-height: auto;
+
+        margin-bottom: 9px;
+
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
+
+    .blog-content p {
+
+        min-height: auto;
+
+        margin-bottom: 15px;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BUTTON */
+
+    .blog-read-btn {
+
+        width: 92px;
+
+        height: 34px;
+
+        border-radius: 6px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-blog-container {
+
+        width: 94%;
+    }
+
+
+    .stackly-blog-heading h2 {
+
+        font-size: 23px;
+    }
+
+
+    .blog-image-wrap {
+
+        height: 175px;
+    }
+
+
+    .blog-meta {
+
+        font-size: 8px;
+
+        gap: 10px;
+    }
+
+
+    .blog-content h3 {
+
+        font-size: 13px;
+    }
+
+
+    .blog-content p {
+
+        font-size: 9px;
+    }
+}
+
+
+
+/* =========================================================
+   STACKLY SMALL CTA
+========================================================= */
+
+.stackly-small-cta {
+    width: 100%;
+    min-height: 300px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../assets/background-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* DARK MEDICAL OVERLAY */
+
+.stackly-small-cta-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 47, 62, .88),
+            rgba(8, 47, 62, .62)
+        );
+
+    z-index: 1;
+}
+
+
+/* CONTENT */
+
+.stackly-small-cta-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(700px, 90%);
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+
+/* LABEL */
+
+.stackly-small-cta-label {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    border-radius: 30px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+
+/* HEADING */
+
+.stackly-small-cta-content h2 {
+    margin: 15px 0 10px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+/* TEXT */
+
+.stackly-small-cta-content p {
+    width: min(570px, 100%);
+
+    margin: 0 auto 22px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.88);
+}
+
+
+/* BUTTON */
+
+.stackly-small-cta-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    height: 45px;
+
+    padding: 0 25px;
+
+    border-radius: 30px;
+
+    background: #36c4ca;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all .3s ease;
+}
+
+.stackly-small-cta-btn:hover {
+    background: #ffffff;
+
+    color: #082f3e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .stackly-small-cta {
+        min-height: 330px;
+
+        padding: 50px 0;
+    }
+
+    .stackly-small-cta-content {
+        width: 90%;
+    }
+
+    .stackly-small-cta-label {
+        font-size: 10px;
+    }
+
+    .stackly-small-cta-content h2 {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+    .stackly-small-cta-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .stackly-small-cta-btn {
+        height: 47px;
+
+        min-width: 175px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .stackly-small-cta {
+        min-height: 350px;
+    }
+
+    .stackly-small-cta-content h2 {
+        font-size: 25px;
+    }
+
+    .stackly-small-cta-content p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,2658 @@
+/* =========================================
+   STACKLY CONTACT HERO
+========================================= */
+
+.stackly-contact-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("../assets/background-hero.webp");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 30, 57, .88),
+            rgba(11, 48, 72, .68),
+            rgba(7, 35, 60, .72)
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.contact-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SMALL LABEL
+========================================= */
+
+.contact-hero-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #36c4ca;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.contact-hero-content h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.contact-hero-breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.contact-hero-breadcrumb a {
+
+    color: #36c4ca;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+}
+
+
+.contact-hero-breadcrumb a:hover {
+
+    color: #ffffff;
+}
+
+
+.contact-hero-breadcrumb span {
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-contact-hero {
+
+        height: 390px;
+
+        background-position: center;
+    }
+
+    .contact-hero-content h1 {
+
+        font-size: 52px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-contact-hero {
+
+        height: 350px;
+
+        min-height: 350px;
+
+        background-position: center center;
+    }
+
+
+    .contact-hero-overlay {
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7, 30, 57, .90),
+                rgba(8, 47, 62, .78)
+            );
+    }
+
+
+    .contact-hero-content {
+
+        width: 92%;
+
+        padding: 0 10px;
+    }
+
+
+    .contact-hero-label {
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 9px;
+    }
+
+
+    .contact-hero-content h1 {
+
+        font-size: 40px;
+
+        line-height: 1.15;
+
+        letter-spacing: -.5px;
+    }
+
+
+    .contact-hero-breadcrumb {
+
+        gap: 7px;
+
+        margin-top: 13px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-contact-hero {
+
+        height: 320px;
+
+        min-height: 320px;
+    }
+
+
+    .contact-hero-content h1 {
+
+        font-size: 35px;
+    }
+
+
+    .contact-hero-breadcrumb {
+
+        font-size: 11px;
+    }
+}
+
+
+
+/* =========================================================
+   STACKLY CONTACT SECTION
+========================================================= */
+
+.stackly-contact-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 90px 0 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061f2c 0%,
+            #082f3e 48%,
+            #0a4551 100%
+        );
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.stackly-contact-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: -280px;
+    top: -250px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(8,166,200,.18);
+
+    box-shadow:
+        0 0 0 80px rgba(8,166,200,.035),
+        0 0 0 160px rgba(8,166,200,.025);
+
+    pointer-events: none;
+}
+
+.stackly-contact-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(8,166,200,.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================================= */
+
+.stackly-contact-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1200px, 90%);
+
+    min-height: 650px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        32% 24% 44%;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+========================================================= */
+
+.contact-visual {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 590px;
+
+    z-index: 1;
+}
+
+
+.contact-image-wrap {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.25);
+}
+
+
+.contact-image-wrap img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION CARD
+========================================================= */
+
+.contact-info-card {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: calc(100% + 35px);
+
+    margin-left: -35px;
+
+    padding: 42px 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f2fafb
+        );
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.22);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INFO ITEM
+========================================================= */
+
+.contact-info-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-bottom: 31px;
+}
+
+
+.contact-info-item:last-of-type {
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   INFO ICON
+========================================================= */
+
+.contact-info-icon {
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px rgba(8,166,200,.22);
+}
+
+
+.contact-info-icon .material-symbols-outlined {
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+
+/* =========================================================
+   INFO TEXT
+========================================================= */
+
+.contact-info-item h3 {
+
+    margin: 0 0 5px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+.contact-info-item p {
+
+    margin: 0 0 4px;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.contact-socials {
+
+    padding-top: 25px;
+
+    border-top: 1px solid #d8e5e8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.contact-socials a {
+
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #cbdde1;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #082f3e;
+
+    text-decoration: none;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.contact-socials a:hover {
+
+    background: #08a6c8;
+
+    border-color: #08a6c8;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+}
+
+
+.contact-socials i {
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM AREA
+========================================================= */
+
+.contact-form-area {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-left: 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.contact-form-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #36c4ca;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.contact-form-area h2 {
+
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.04;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+.contact-form-area h2 span {
+
+    display: block;
+
+    color: #36c4ca;
+
+    font-style: italic;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.contact-form-description {
+
+    max-width: 650px;
+
+    margin: 0 0 38px;
+
+    color: #b7cbd1;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+#stacklyContactForm {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d7e5e8;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA
+========================================================= */
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 0 0 11px;
+
+    border: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.28);
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .3s ease;
+}
+
+
+.form-group input {
+
+    height: 35px;
+}
+
+
+.form-group textarea {
+
+    min-height: 95px;
+
+    resize: vertical;
+
+    padding-top: 5px;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #78929a;
+
+    opacity: 1;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-bottom-color: #36c4ca;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.form-error {
+
+    display: block;
+
+    min-height: 0;
+
+    margin-top: 7px;
+
+    color: #ff8d8d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INVALID FIELD
+========================================================= */
+
+.form-group.invalid input,
+.form-group.invalid textarea {
+
+    border-bottom-color: #ff7070;
+}
+
+
+/* =========================================================
+   VALID FIELD
+========================================================= */
+
+.form-group.valid input,
+.form-group.valid textarea {
+
+    border-bottom-color: #36c4ca;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.contact-submit-btn {
+
+    width: 165px;
+
+    height: 49px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.contact-submit-btn:hover {
+
+    background: #36c4ca;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(8,166,200,.25);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .stackly-contact-container {
+
+        width: 92%;
+
+        grid-template-columns:
+            35% 27% 38%;
+    }
+
+
+    .contact-info-card {
+
+        width: calc(100% + 25px);
+
+        margin-left: -25px;
+
+        padding: 35px 25px;
+    }
+
+
+    .contact-form-area {
+
+        padding-left: 35px;
+    }
+
+
+    .contact-form-area h2 {
+
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .stackly-contact-section {
+
+        padding: 60px 0 70px;
+    }
+
+
+    .stackly-contact-container {
+
+        width: 92%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+    }
+
+
+    /* IMAGE */
+
+    .contact-visual {
+
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 340px;
+
+        order: 1;
+    }
+
+
+    .contact-image-wrap {
+
+        border-radius: 14px 14px 0 0;
+    }
+
+
+    /* INFO CARD */
+
+    .contact-info-card {
+
+        width: calc(100% - 20px);
+
+        max-width: 360px;
+
+        margin: -45px 0 0;
+
+        padding: 32px 25px;
+
+        border-radius: 12px;
+
+        order: 2;
+    }
+
+
+    .contact-info-item {
+
+        margin-bottom: 25px;
+
+        gap: 13px;
+    }
+
+
+    .contact-info-icon {
+
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+
+    .contact-info-item h3 {
+
+        font-size: 15px;
+    }
+
+
+    .contact-info-item p {
+
+        font-size: 10px;
+    }
+
+
+    /* SOCIAL */
+
+    .contact-socials {
+
+        padding-top: 20px;
+    }
+
+
+    /* FORM */
+
+    .contact-form-area {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        padding: 55px 0 0;
+
+        order: 3;
+
+        text-align: left;
+    }
+
+
+    .contact-form-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+        text-align: center;
+    }
+
+
+    .contact-form-area h2 {
+
+        font-size: 38px;
+
+        line-height: 1.08;
+
+        letter-spacing: -.5px;
+
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+    .contact-form-description {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+
+    .form-group {
+
+        margin-bottom: 23px;
+    }
+
+
+    .form-group input,
+    .form-group textarea {
+
+        font-size: 12px;
+    }
+
+
+    .contact-submit-btn {
+
+        width: 155px;
+
+        height: 47px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-contact-container {
+
+        width: 94%;
+    }
+
+
+    .contact-visual {
+
+        height: 300px;
+    }
+
+
+    .contact-info-card {
+
+        width: calc(100% - 12px);
+
+        padding: 28px 20px;
+    }
+
+
+    .contact-form-area h2 {
+
+        font-size: 33px;
+    }
+
+
+    .contact-form-description {
+
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   STACKLY CONTACT INFORMATION
+========================================================= */
+
+.stackly-contact-info {
+
+    width: 100%;
+
+    padding: 75px 0 80px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.contact-info-container {
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.contact-info-box {
+
+    min-height: 300px;
+
+    padding: 10px 45px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid #dbe7ea;
+}
+
+
+/* Remove last divider */
+
+.contact-info-box:last-child {
+
+    border-right: none;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.contact-info-icon {
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #08a6c8;
+
+    background: #edf7f8;
+
+    border: 1px solid #08a6c8;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.contact-info-icon .material-symbols-outlined {
+
+    font-family:
+        "Material Symbols Outlined" !important;
+
+    font-size: 27px !important;
+
+    line-height: 1 !important;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 28;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.contact-info-box:hover .contact-info-icon {
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(8,166,200,.20);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.contact-info-box h3 {
+
+    margin: 0 0 20px;
+
+    color: #082f3e;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: .2px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.contact-info-text {
+
+    min-height: 53px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-info-text p {
+
+    margin: 0 0 8px;
+
+    color: #71858d;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+}
+
+
+.contact-info-text p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.contact-info-btn {
+
+    min-width: 145px;
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #08a6c8;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #082f3e;
+
+    text-decoration: none;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.contact-info-btn:hover {
+
+    background: #08a6c8;
+
+    border-color: #08a6c8;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(8,166,200,.18);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-info-container {
+
+        width: 92%;
+    }
+
+
+    .contact-info-box {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .contact-info-box h3 {
+
+        font-size: 15px;
+    }
+
+
+    .contact-info-text p {
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .stackly-contact-info {
+
+        padding: 55px 0 65px;
+    }
+
+
+    .contact-info-container {
+
+        width: 92%;
+
+        max-width: 380px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+    }
+
+
+    .contact-info-box {
+
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 10px 20px 40px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #dbe7ea;
+    }
+
+
+    .contact-info-box:last-child {
+
+        border-bottom: none;
+
+        padding-bottom: 10px;
+    }
+
+
+    .contact-info-icon {
+
+        width: 54px;
+        height: 54px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .contact-info-box h3 {
+
+        font-size: 16px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .contact-info-text {
+
+        min-height: auto;
+
+        margin-bottom: 22px;
+    }
+
+
+    .contact-info-text p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .contact-info-btn {
+
+        min-width: 150px;
+
+        height: 43px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .contact-info-container {
+
+        width: 94%;
+    }
+
+
+    .contact-info-box {
+
+        min-height: 250px;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .contact-info-box h3 {
+
+        font-size: 15px;
+    }
+
+
+    .contact-info-text p {
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   STACKLY OFFICE MAP
+========================================================= */
+
+.stackly-office-map-section {
+
+    width: 100%;
+
+    padding: 75px 0 0;
+
+    background: #edf7f8;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.office-map-heading {
+
+    width: min(900px, 90%);
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.office-map-heading > span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #08a6c8;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.office-map-heading h2 {
+
+    margin: 0 0 10px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+}
+
+
+.office-map-heading h2 strong {
+
+    font-weight: 800;
+
+    color: #082f3e;
+}
+
+
+.office-map-heading p {
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.office-map-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 470px;
+
+    overflow: hidden;
+
+    background: #dceff2;
+}
+
+
+.office-map-wrapper iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+
+    filter:
+        saturate(.85)
+        contrast(.95);
+}
+
+
+/* =========================================================
+   OFFICE CARD
+========================================================= */
+
+.office-map-card {
+
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 35px;
+
+    width: 330px;
+
+    min-height: 105px;
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(255,255,255,.97);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(8,47,62,.18);
+
+    box-sizing: border-box;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.office-map-card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+}
+
+
+.office-map-card-icon .material-symbols-outlined {
+
+    font-family:
+        "Material Symbols Outlined" !important;
+
+    font-size: 25px !important;
+
+    line-height: 1 !important;
+
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.office-card-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #08a6c8;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.office-map-card h3 {
+
+    margin: 0 0 3px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.office-map-card p {
+
+    margin: 0;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-office-map-section {
+
+        padding-top: 60px;
+    }
+
+
+    .office-map-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .office-map-wrapper {
+
+        height: 430px;
+    }
+
+
+    .office-map-card {
+
+        left: 4%;
+
+        bottom: 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-office-map-section {
+
+        padding-top: 50px;
+    }
+
+
+    .office-map-heading {
+
+        width: 92%;
+
+        margin-bottom: 28px;
+    }
+
+
+    .office-map-heading > span {
+
+        font-size: 11px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .office-map-heading h2 {
+
+        font-size: 26px;
+
+        line-height: 1.25;
+    }
+
+
+    .office-map-heading p {
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .office-map-wrapper {
+
+        height: 420px;
+    }
+
+
+    .office-map-card {
+
+        left: 50%;
+
+        bottom: 20px;
+
+        width: calc(100% - 30px);
+
+        max-width: 360px;
+
+        min-height: 95px;
+
+        padding: 17px 18px;
+
+        transform: translateX(-50%);
+
+        border-radius: 10px;
+    }
+
+
+    .office-map-card-icon {
+
+        width: 43px;
+
+        height: 43px;
+
+        flex-basis: 43px;
+    }
+
+
+    .office-map-card h3 {
+
+        font-size: 14px;
+    }
+
+
+    .office-map-card p {
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .office-map-wrapper {
+
+        height: 390px;
+    }
+
+
+    .office-map-heading h2 {
+
+        font-size: 24px;
+    }
+
+
+    .office-map-card {
+
+        width: calc(100% - 24px);
+
+        bottom: 15px;
+    }
+}
+
+
+/* =========================================================
+   STACKLY FAQ SECTION
+========================================================= */
+
+.stackly-faq-section {
+
+    width: 100%;
+
+    padding: 90px 0;
+
+    background: #edf7f8;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.stackly-faq-container {
+
+    width: min(1120px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        46% 54%;
+
+    align-items: center;
+
+    gap: 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.faq-image-area {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 530px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.faq-image-wrap {
+
+    position: relative;
+
+    width: 88%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #d8edef;
+
+    box-shadow:
+        0 18px 40px rgba(8,47,62,.13);
+}
+
+
+.faq-image-wrap img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   IMAGE BADGE
+========================================================= */
+
+.faq-image-badge {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 45px;
+
+    width: 245px;
+
+    min-height: 78px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 12px 30px rgba(8,47,62,.16);
+
+    box-sizing: border-box;
+}
+
+
+.faq-image-badge > .material-symbols-outlined {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #08a6c8;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+
+.faq-image-badge strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.faq-image-badge small {
+
+    display: block;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.faq-content-area {
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.faq-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #08a6c8;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.faq-content-area h2 {
+
+    margin: 0 0 14px;
+
+    color: #082f3e;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 35px;
+
+    line-height: 1.18;
+
+    font-weight: 400;
+
+    letter-spacing: -.6px;
+}
+
+
+.faq-content-area h2 span {
+
+    display: inline;
+
+    color: #08a6c8;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.faq-intro {
+
+    max-width: 570px;
+
+    margin: 0 0 28px;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.faq-item {
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce8ea;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.faq-item.active {
+
+    border-color: #08a6c8;
+
+    box-shadow:
+        0 8px 22px rgba(8,166,200,.08);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.faq-question {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border: none;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #082f3e;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    font-weight: 800;
+
+    box-sizing: border-box;
+}
+
+
+.faq-icon {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex: 0 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf7f8;
+
+    color: #08a6c8;
+
+    font-size: 17px !important;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.faq-item.active .faq-icon {
+
+    background: #08a6c8;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.faq-answer {
+
+    height: 0;
+
+    overflow: hidden;
+}
+
+
+.faq-answer p {
+
+    margin: 0;
+
+    padding: 0 18px 17px;
+
+    color: #71858d;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-faq-container {
+
+        width: 92%;
+
+        gap: 35px;
+
+        grid-template-columns:
+            44% 56%;
+    }
+
+
+    .faq-image-area {
+
+        min-height: 470px;
+    }
+
+
+    .faq-image-wrap {
+
+        width: 92%;
+
+        height: 440px;
+    }
+
+
+    .faq-image-badge {
+
+        width: 215px;
+
+        left: 0;
+
+        bottom: 30px;
+    }
+
+
+    .faq-content-area h2 {
+
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .stackly-faq-section {
+
+        padding: 60px 0 70px;
+    }
+
+
+    .stackly-faq-container {
+
+        width: 92%;
+
+        max-width: 500px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+
+    /* IMAGE */
+
+    .faq-image-area {
+
+        width: 100%;
+
+        min-height: 390px;
+
+        order: 1;
+    }
+
+
+    .faq-image-wrap {
+
+        width: 90%;
+
+        height: 380px;
+
+        border-radius: 15px;
+    }
+
+
+    .faq-image-badge {
+
+        left: 2%;
+
+        bottom: 5px;
+
+        width: 225px;
+
+        min-height: 72px;
+    }
+
+
+    /* CONTENT */
+
+    .faq-content-area {
+
+        width: 100%;
+
+        order: 2;
+
+        text-align: left;
+    }
+
+
+    .faq-label {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+
+    .faq-content-area h2 {
+
+        font-size: 28px;
+
+        line-height: 1.22;
+        text-align: center;
+    }
+
+
+    .faq-content-area h2 span {
+
+        display: block;
+    }
+
+
+    .faq-intro {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+
+    .faq-question {
+
+        min-height: 60px;
+
+        padding: 14px 15px;
+
+        font-size: 13px;
+    }
+
+
+    .faq-answer p {
+
+        padding: 0 15px 16px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-faq-container {
+
+        width: 94%;
+    }
+
+
+    .faq-image-area {
+
+        min-height: 350px;
+    }
+
+
+    .faq-image-wrap {
+
+        height: 340px;
+
+        width: 92%;
+    }
+
+
+    .faq-image-badge {
+
+        width: 205px;
+
+        left: 0;
+
+        padding: 12px;
+    }
+
+
+    .faq-image-badge strong {
+
+        font-size: 11px;
+    }
+
+
+    .faq-content-area h2 {
+
+        font-size: 25px;
+    }
+
+
+    .faq-question {
+
+        font-size: 10px;
+    }
+}

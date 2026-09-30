@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Medical - Client Dashboard</title>
+
+
+    <!-- GOOGLE FONT -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- MATERIAL SYMBOLS -->
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- DASHBOARD CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/client-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="stackly-dashboard">
+
+
+    <!-- ==================================================
+         MOBILE OVERLAY
+    =================================================== -->
+
+    <div
+        class="dashboard-overlay"
+        id="dashboardOverlay">
+    </div>
+
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar">
+
+
+        <!-- LOGO -->
+
+      <a href="client-dashboard.html" class="dashboard-logo">
+    <img src="assets/logo 4.webp" alt="Stackly Logo">
+</a>
+
+
+
+        <!-- USER -->
+
+        <div class="sidebar-user">
+
+            <div
+                class="sidebar-avatar"
+                id="sidebarAvatar">
+
+                Y
+
+            </div>
+
+            <div>
+
+                <strong id="sidebarUserName">
+                    Client
+                </strong>
+
+                <span>
+                    Medical Client
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="dashboard-menu">
+
+
+            <p class="menu-title">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="#overview"
+                class="dashboard-menu-link active"
+                data-page="overview">
+
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+
+                <span>
+                    Overview
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#appointments"
+                class="dashboard-menu-link"
+                data-page="appointments">
+
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#orders"
+                class="dashboard-menu-link"
+                data-page="orders">
+
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+
+                <span>
+                    My Orders
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#equipment"
+                class="dashboard-menu-link"
+                data-page="equipment">
+
+                <span class="material-symbols-outlined">
+                    medical_services
+                </span>
+
+                <span>
+                    Medical Equipment
+                </span>
+
+            </a>
+
+
+
+            <p class="menu-title second-menu-title">
+                ACCOUNT
+            </p>
+
+
+
+            <a
+                href="#profile"
+                class="dashboard-menu-link"
+                data-page="profile">
+
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+
+                <span>
+                    My Profile
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#settings"
+                class="dashboard-menu-link"
+                data-page="settings">
+
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="404.html"
+                class="dashboard-menu-link">
+
+                <span class="material-symbols-outlined">
+                    help
+                </span>
+
+                <span>
+                    Help Center
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="404.html"
+                class="sidebar-support">
+
+                <span class="material-symbols-outlined">
+                    support_agent
+                </span>
+
+                <div>
+
+                    <strong>
+                        Need Help?
+                    </strong>
+
+                    <span>
+                        Contact Stackly Support
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="login.html"
+                class="sidebar-home">
+
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+                Back to Website
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         MAIN AREA
+    =================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- ==================================================
+             HEADER
+        =================================================== -->
+
+        <header class="dashboard-header">
+
+
+            <div class="header-left">
+
+
+                <button
+                    class="mobile-menu-toggle"
+                    id="mobileMenuToggle">
+
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+
+                </button>
+
+
+                <div class="header-title">
+
+                    <span>
+                        STACKLY HEALTHCARE
+                    </span>
+
+                    <h1 id="headerPageTitle">
+                        Overview
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="header-right">
+
+
+                <!-- SEARCH -->
+
+                <button
+                    class="header-search"
+                    id="headerSearch">
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <span class="search-text">
+                        Search
+                    </span>
+
+                </button>
+
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    class="header-notification"
+                    id="headerNotification">
+
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+
+                    <span class="notification-dot">
+                    </span>
+
+                </button>
+
+
+
+                <!-- USER -->
+
+                <div class="header-user">
+
+
+                    <div
+                        class="header-avatar"
+                        id="headerAvatar">
+
+                        Y
+
+                    </div>
+
+
+                    <div class="header-user-info">
+
+                        <strong id="headerUserName">
+                            Client
+                        </strong>
+
+                        <span id="headerUserEmail">
+                            client@stackly.com
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             PAGE CONTENT
+        =================================================== -->
+
+        <div class="dashboard-content">
+
+
+
+            <!-- ==========================================
+                 OVERVIEW
+            =========================================== -->
+
+            <section
+                class="dashboard-page active-page"
+                id="page-overview">
+
+
+                <div class="welcome-card">
+
+
+                    <div>
+
+                        <span class="welcome-label">
+                            STACKLY CLIENT PORTAL
+                        </span>
+
+                        <h2>
+                            Welcome back,
+                            <strong id="welcomeName">
+                            client@stackly.com
+                            </strong>
+                        </h2>
+
+                        <p>
+                            Manage your healthcare services,
+                            medical equipment orders,
+                            appointments and reports from
+                            one secure dashboard.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-actions">
+
+                        <a
+                            href="404.html"
+                            class="primary-dashboard-btn">
+
+                            View Appointments
+
+                        </a>
+
+                        <a
+                            href="404.html"
+                            class="secondary-dashboard-btn">
+
+                            Explore Equipment
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STAT CARDS -->
+
+                <div class="dashboard-stats">
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-icon purple">
+
+                            <span class="material-symbols-outlined">
+                                medical_services
+                            </span>
+
+                        </div>
+
+                        <span>
+                            EQUIPMENT ORDERS
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <small>
+                            6 active orders
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-icon blue">
+
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+
+                        </div>
+
+                        <span>
+                            APPOINTMENTS
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                        <small>
+                            2 upcoming
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-icon green">
+
+                            <span class="material-symbols-outlined">
+                                verified
+                            </span>
+
+                        </div>
+
+                        <span>
+                            COMPLETED SERVICES
+                        </span>
+
+                        <strong>
+                            36
+                        </strong>
+
+                        <small>
+                            4 this month
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-icon cyan">
+
+                            <span class="material-symbols-outlined">
+                                description
+                            </span>
+
+                        </div>
+
+                        <span>
+                            MEDICAL REPORTS
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <small>
+                            3 new reports
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TWO COLUMNS -->
+
+                <div class="dashboard-two-column">
+
+
+                    <!-- UPCOMING -->
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    YOUR HEALTHCARE
+                                </span>
+
+                                <h3>
+                                    Upcoming Appointments
+                                </h3>
+
+                            </div>
+
+                            <a href="404.html">
+                                View All
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="appointment-list">
+
+
+                            <div class="appointment-item">
+
+                                <div class="appointment-date">
+
+                                    <strong>
+                                        18
+                                    </strong>
+
+                                    <span>
+                                        OCT
+                                    </span>
+
+                                </div>
+
+
+                                <div class="appointment-info">
+
+                                    <strong>
+                                        General Health Checkup
+                                    </strong>
+
+                                    <span>
+                                        Stackly Medical Center
+                                    </span>
+
+                                    <small>
+                                        10:30 AM
+                                    </small>
+
+                                </div>
+
+
+                                <a
+                                    href="404.html"
+                                    class="small-action-btn">
+
+                                    Details
+
+                                </a>
+
+                            </div>
+
+
+
+                            <div class="appointment-item">
+
+                                <div class="appointment-date">
+
+                                    <strong>
+                                        24
+                                    </strong>
+
+                                    <span>
+                                        OCT
+                                    </span>
+
+                                </div>
+
+
+                                <div class="appointment-info">
+
+                                    <strong>
+                                        Equipment Consultation
+                                    </strong>
+
+                                    <span>
+                                        Stackly Healthcare
+                                    </span>
+
+                                    <small>
+                                        02:00 PM
+                                    </small>
+
+                                </div>
+
+
+                                <a
+                                    href="404.html"
+                                    class="small-action-btn">
+
+                                    Details
+
+                                </a>
+
+                            </div>
+
+
+
+                            <div class="appointment-item">
+
+                                <div class="appointment-date">
+
+                                    <strong>
+                                        02
+                                    </strong>
+
+                                    <span>
+                                        NOV
+                                    </span>
+
+                                </div>
+
+
+                                <div class="appointment-info">
+
+                                    <strong>
+                                        Follow-up Consultation
+                                    </strong>
+
+                                    <span>
+                                        Stackly Medical Center
+                                    </span>
+
+                                    <small>
+                                        11:15 AM
+                                    </small>
+
+                                </div>
+
+
+                                <a
+                                    href="404.html"
+                                    class="small-action-btn">
+
+                                    Details
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PROFILE -->
+
+                    <div class="dashboard-panel profile-summary">
+
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT
+                                </span>
+
+                                <h3>
+                                    Client Information
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-summary-box">
+
+                            <div
+                                class="large-profile-avatar"
+                                id="largeProfileAvatar">
+
+                                Y
+
+                            </div>
+
+
+                            <div>
+
+                                <strong id="profileDisplayName">
+                                    Client
+                                </strong>
+
+                                <span id="profileDisplayEmail">
+                                    client@stackly.com
+                                </span>
+
+                                <small>
+                                    Stackly Medical Client
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-details">
+
+                            <div>
+
+                                <span>
+                                    Account Status
+                                </span>
+
+                                <strong class="status-active">
+                                    Active
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Account Type
+                                </span>
+
+                                <strong>
+                                    Client
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Member Since
+                                </span>
+
+                                <strong>
+                                    2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#profile"
+                            class="panel-full-btn">
+
+                            Manage Profile
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECENT ORDERS -->
+
+                <div class="dashboard-panel recent-orders-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                MEDICAL EQUIPMENT
+                            </span>
+
+                            <h3>
+                                Recent Orders
+                            </h3>
+
+                        </div>
+
+                        <a href="#orders">
+                            View Orders
+                        </a>
+
+                    </div>
+
+
+                    <div class="orders-table-wrapper">
+
+                        <table class="orders-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Product
+                                    </th>
+
+                                    <th>
+                                        Order ID
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Digital Thermometer
+                                    </td>
+
+                                    <td>
+                                        #STK-2451
+                                    </td>
+
+                                    <td>
+                                        12 Oct 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="order-status delivered">
+                                            Delivered
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Patient Monitor
+                                    </td>
+
+                                    <td>
+                                        #STK-2418
+                                    </td>
+
+                                    <td>
+                                        06 Oct 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="order-status processing">
+                                            Processing
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Medical Wheelchair
+                                    </td>
+
+                                    <td>
+                                        #STK-2386
+                                    </td>
+
+                                    <td>
+                                        29 Sep 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="order-status shipped">
+                                            Shipped
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==========================================
+                 APPOINTMENTS
+            =========================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-appointments">
+
+
+                <div class="page-intro">
+
+                    <span>
+                        HEALTHCARE SERVICES
+                    </span>
+
+                    <h2>
+                        Your Appointments
+                    </h2>
+
+                    <p>
+                        Manage upcoming consultations,
+                        equipment support sessions and
+                        healthcare appointments.
+                    </p>
+
+                </div>
+
+
+                <div class="large-content-grid">
+
+
+                    <div class="content-card">
+
+                        <span class="content-card-icon">
+
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+
+                        </span>
+
+                        <h3>
+                            General Health Checkup
+                        </h3>
+
+                        <p>
+                            Review your upcoming general
+                            health consultation with our
+                            healthcare professionals.
+                        </p>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            View Appointment
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <span class="content-card-icon">
+
+                            <span class="material-symbols-outlined">
+                                medical_services
+                            </span>
+
+                        </span>
+
+                        <h3>
+                            Equipment Consultation
+                        </h3>
+
+                        <p>
+                            Get professional assistance when
+                            selecting medical equipment for
+                            your healthcare requirements.
+                        </p>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            View Appointment
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <span class="content-card-icon">
+
+                            <span class="material-symbols-outlined">
+                                health_and_safety
+                            </span>
+
+                        </span>
+
+                        <h3>
+                            Follow-up Consultation
+                        </h3>
+
+                        <p>
+                            Continue your healthcare journey
+                            with scheduled follow-up services.
+                        </p>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            View Appointment
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="appointments-content">
+
+    <div class="appointments-header">
+        <div>
+            <span class="appointments-label">MY APPOINTMENTS</span>
+            <h2>Appointments</h2>
+            <p>Manage your upcoming medical consultations and healthcare appointments.</p>
+        </div>
+
+        <a href="404.html" class="appointments-btn">
+            Book Appointment
+        </a>
+    </div>
+
+
+    <div class="appointment-stats">
+
+        <div class="appointment-stat-card">
+            <div class="appointment-stat-icon">
+                <span class="material-symbols-outlined">event</span>
+            </div>
+
+            <div>
+                <span>Upcoming</span>
+                <strong>03</strong>
+            </div>
+        </div>
+
+
+        <div class="appointment-stat-card">
+            <div class="appointment-stat-icon">
+                <span class="material-symbols-outlined">task_alt</span>
+            </div>
+
+            <div>
+                <span>Completed</span>
+                <strong>12</strong>
+            </div>
+        </div>
+
+
+        <div class="appointment-stat-card">
+            <div class="appointment-stat-icon">
+                <span class="material-symbols-outlined">schedule</span>
+            </div>
+
+            <div>
+                <span>Pending</span>
+                <strong>01</strong>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="appointments-section">
+
+        <div class="appointments-section-heading">
+            <div>
+                <h3>Upcoming Appointments</h3>
+                <p>Your scheduled healthcare consultations</p>
+            </div>
+
+            <a href="404.html">View All</a>
+        </div>
+
+
+        <div class="appointment-list">
+
+
+            <div class="appointment-card">
+
+                <div class="appointment-doctor">
+                    <div class="doctor-avatar">
+                        DR
+                    </div>
+
+                    <div>
+                        <h4>Dr. Sarah Wilson</h4>
+                        <span>Cardiologist</span>
+                    </div>
+                </div>
+
+
+                <div class="appointment-details">
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+
+                        <div>
+                            <small>Date</small>
+                            <strong>28 Sep 2026</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+
+                        <div>
+                            <small>Time</small>
+                            <strong>10:30 AM</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+
+                        <div>
+                            <small>Location</small>
+                            <strong>Stackly Medical Center</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-actions">
+
+                    <span class="appointment-status">
+                        Confirmed
+                    </span>
+
+                    <a href="404.html">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="appointment-card">
+
+                <div class="appointment-doctor">
+                    <div class="doctor-avatar">
+                        DR
+                    </div>
+
+                    <div>
+                        <h4>Dr. Michael Thomas</h4>
+                        <span>Neurologist</span>
+                    </div>
+                </div>
+
+
+                <div class="appointment-details">
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+
+                        <div>
+                            <small>Date</small>
+                            <strong>02 Oct 2026</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+
+                        <div>
+                            <small>Time</small>
+                            <strong>02:00 PM</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+
+                        <div>
+                            <small>Location</small>
+                            <strong>Stackly Care Clinic</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-actions">
+
+                    <span class="appointment-status">
+                        Confirmed
+                    </span>
+
+                    <a href="404.html">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="appointment-card">
+
+                <div class="appointment-doctor">
+                    <div class="doctor-avatar">
+                        DR
+                    </div>
+
+                    <div>
+                        <h4>Dr. Emily Johnson</h4>
+                        <span>Physiotherapist</span>
+                    </div>
+                </div>
+
+
+                <div class="appointment-details">
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+
+                        <div>
+                            <small>Date</small>
+                            <strong>08 Oct 2026</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+
+                        <div>
+                            <small>Time</small>
+                            <strong>11:15 AM</strong>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+
+                        <div>
+                            <small>Location</small>
+                            <strong>Stackly Wellness Center</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-actions">
+
+                    <span class="appointment-status pending">
+                        Pending
+                    </span>
+
+                    <a href="404.html">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="appointment-info-box">
+
+        <div class="appointment-info-icon">
+            <span class="material-symbols-outlined">
+                medical_information
+            </span>
+        </div>
+
+        <div>
+            <h3>Need to change your appointment?</h3>
+            <p>
+                You can view appointment details, contact the healthcare
+                center, or manage your appointment from your account.
+            </p>
+        </div>
+
+        <a href="404.html">
+            Contact Support
+        </a>
+
+    </div>
+
+</div>
+
+ </section>
+
+
+
+            <!-- ==========================================
+                 ORDERS
+            =========================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-orders">
+
+
+                <div class="page-intro">
+
+                    <span>
+                        STACKLY STORE
+                    </span>
+
+                    <h2>
+                        My Medical Equipment Orders
+                    </h2>
+
+                    <p>
+                        Track your medical equipment and
+                        healthcare product orders.
+                    </p>
+
+                </div>
+
+
+                <div class="equipment-grid">
+
+
+                    <div class="equipment-card">
+
+                        <div class="equipment-image">
+                            <img
+                                src="assets/thermometer.webp"
+                                alt="Digital Thermometer">
+                        </div>
+
+                        <span class="equipment-status">
+                            Delivered
+                        </span>
+
+                        <h3>
+                            Digital Thermometer
+                        </h3>
+
+                        <p>
+                            Order #STK-2451
+                        </p>
+
+                        <strong>
+                            $50
+                        </strong>
+
+                        <a
+                            href="404.html"
+                            class="card-action">
+
+                            Order Details
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="equipment-card">
+
+                        <div class="equipment-image">
+                            <img
+                                src="assets/microscope.webp"
+                                alt="Laboratory Microscope">
+                        </div>
+
+                        <span class="equipment-status processing">
+                            Processing
+                        </span>
+
+                        <h3>
+                            Laboratory Microscope
+                        </h3>
+
+                        <p>
+                            Order #STK-2418
+                        </p>
+
+                        <strong>
+                            $350
+                        </strong>
+
+                        <a
+                            href="404.html"
+                            class="card-action">
+
+                            Order Details
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="equipment-card">
+
+                        <div class="equipment-image">
+                            <img
+                                src="assets/wheel-chair.webp"
+                                alt="Medical Wheelchair">
+                        </div>
+
+                        <span class="equipment-status shipped">
+                            Shipped
+                        </span>
+
+                        <h3>
+                            Medical Wheelchair
+                        </h3>
+
+                        <p>
+                            Order #STK-2386
+                        </p>
+
+                        <strong>
+                            $500
+                        </strong>
+
+                        <a
+                            href="404.html"
+                            class="card-action">
+
+                            Order Details
+
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="orders-content">
+
+    <div class="orders-header">
+
+        <div>
+            <span class="orders-label">MY ORDERS</span>
+
+            <h2>My Orders</h2>
+
+            <p>
+                Track your medical equipment orders, delivery status,
+                and recent purchases from Stackly.
+            </p>
+        </div>
+
+        <a href="404.html" class="orders-btn">
+            Shop Equipment
+        </a>
+
+    </div>
+
+
+    <div class="order-summary">
+
+        <div class="order-summary-card">
+
+            <div class="order-summary-icon">
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </div>
+
+            <div>
+                <span>Total Orders</span>
+                <strong>18</strong>
+            </div>
+
+        </div>
+
+
+        <div class="order-summary-card">
+
+            <div class="order-summary-icon">
+                <span class="material-symbols-outlined">
+                    local_shipping
+                </span>
+            </div>
+
+            <div>
+                <span>In Delivery</span>
+                <strong>03</strong>
+            </div>
+
+        </div>
+
+
+        <div class="order-summary-card">
+
+            <div class="order-summary-icon">
+                <span class="material-symbols-outlined">
+                    task_alt
+                </span>
+            </div>
+
+            <div>
+                <span>Delivered</span>
+                <strong>15</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="orders-list-section">
+
+        <div class="orders-list-heading">
+
+            <div>
+                <h3>Recent Orders</h3>
+
+                <p>
+                    Your latest medical equipment purchases
+                </p>
+            </div>
+
+            <a href="404.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="order-item">
+
+            <div class="order-product-icon">
+                <span class="material-symbols-outlined">
+                    medical_services
+                </span>
+            </div>
+
+            <div class="order-product-info">
+
+                <h4>Digital Thermometer</h4>
+
+                <span>
+                    Order #STK-1082
+                </span>
+
+            </div>
+
+            <div class="order-date">
+
+                <small>Order Date</small>
+
+                <strong>
+                    24 Sep 2026
+                </strong>
+
+            </div>
+
+            <div class="order-price">
+
+                <small>Total</small>
+
+                <strong>
+                    $85
+                </strong>
+
+            </div>
+
+            <div class="order-status delivered">
+                Delivered
+            </div>
+
+            <a href="404.html" class="order-view-btn">
+                View Order
+            </a>
+
+        </div>
+
+
+        <div class="order-item">
+
+            <div class="order-product-icon">
+                <span class="material-symbols-outlined">
+                    science
+                </span>
+            </div>
+
+            <div class="order-product-info">
+
+                <h4>Laboratory Microscope</h4>
+
+                <span>
+                    Order #STK-1081
+                </span>
+
+            </div>
+
+            <div class="order-date">
+
+                <small>Order Date</small>
+
+                <strong>
+                    21 Sep 2026
+                </strong>
+
+            </div>
+
+            <div class="order-price">
+
+                <small>Total</small>
+
+                <strong>
+                    $350
+                </strong>
+
+            </div>
+
+            <div class="order-status processing">
+                Processing
+            </div>
+
+            <a href="404.html" class="order-view-btn">
+                View Order
+            </a>
+
+        </div>
+
+
+        <div class="order-item">
+
+            <div class="order-product-icon">
+                <span class="material-symbols-outlined">
+                    accessible
+                </span>
+            </div>
+
+            <div class="order-product-info">
+
+                <h4>Medical Wheelchair</h4>
+
+                <span>
+                    Order #STK-1079
+                </span>
+
+            </div>
+
+            <div class="order-date">
+
+                <small>Order Date</small>
+
+                <strong>
+                    18 Sep 2026
+                </strong>
+
+            </div>
+
+            <div class="order-price">
+
+                <small>Total</small>
+
+                <strong>
+                    $490
+                </strong>
+
+            </div>
+
+            <div class="order-status shipped">
+                Shipped
+            </div>
+
+            <a href="404.html" class="order-view-btn">
+                View Order
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="orders-info-box">
+
+        <div class="orders-info-icon">
+
+            <span class="material-symbols-outlined">
+                local_shipping
+            </span>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Need help with your order?
+            </h3>
+
+            <p>
+                Contact Stackly support for order tracking,
+                delivery information, or product assistance.
+            </p>
+
+        </div>
+
+        <a href="404.html">
+            Contact Support
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+            <!-- ==========================================
+                 EQUIPMENT
+            =========================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-equipment">
+
+
+                <div class="page-intro">
+
+                    <span>
+                        MEDICAL EQUIPMENT
+                    </span>
+
+                    <h2>
+                        Healthcare Equipment
+                    </h2>
+
+                    <p>
+                        Explore trusted medical equipment
+                        selected for hospitals, clinics,
+                        laboratories and home healthcare.
+                    </p>
+
+                </div>
+
+
+                <div class="service-list">
+
+
+                    <div class="service-row">
+
+                        <div class="service-row-icon">
+                            <span class="material-symbols-outlined">
+                                monitoring
+                            </span>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Diagnostic Equipment
+                            </h3>
+
+                            <p>
+                                Digital thermometers,
+                                patient monitors and
+                                diagnostic healthcare tools.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Explore
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="service-row">
+
+                        <div class="service-row-icon">
+                            <span class="material-symbols-outlined">
+                                science
+                            </span>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Laboratory Equipment
+                            </h3>
+
+                            <p>
+                                Microscopes, laboratory
+                                glassware and essential
+                                testing equipment.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Explore
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="service-row">
+
+                        <div class="service-row-icon">
+                            <span class="material-symbols-outlined">
+                                surgical
+                            </span>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Surgical Equipment
+                            </h3>
+
+                            <p>
+                                Reliable surgical instruments
+                                and healthcare accessories.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Explore
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="service-row">
+
+                        <div class="service-row-icon">
+                            <span class="material-symbols-outlined">
+                                accessible
+                            </span>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Patient Care Equipment
+                            </h3>
+
+                            <p>
+                                Wheelchairs, rehabilitation
+                                products and everyday patient
+                                care equipment.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Explore
+
+                        </a>
+
+                    </div>
+
+                </div>
+           <div class="equipment-content">
+
+    <div class="equipment-header">
+
+        <div>
+            <span class="equipment-label">EQUIPMENT CENTER</span>
+
+            <h2>Manage Your Healthcare Equipment</h2>
+
+            <p>
+                Keep track of essential healthcare equipment, availability,
+                service status, and equipment information in one place.
+            </p>
+        </div>
+
+        <a href="404.html" class="equipment-btn">
+            Request Equipment
+        </a>
+
+    </div>
+
+
+    <div class="equipment-overview">
+
+        <div class="equipment-overview-card">
+
+            <div class="equipment-overview-icon">
+                <span class="material-symbols-outlined">
+                    devices
+                </span>
+            </div>
+
+            <div>
+                <span>Available Equipment</span>
+                <strong>126</strong>
+            </div>
+
+        </div>
+
+
+        <div class="equipment-overview-card">
+
+            <div class="equipment-overview-icon">
+                <span class="material-symbols-outlined">
+                    build
+                </span>
+            </div>
+
+            <div>
+                <span>Under Service</span>
+                <strong>08</strong>
+            </div>
+
+        </div>
+
+
+        <div class="equipment-overview-card">
+
+            <div class="equipment-overview-icon">
+                <span class="material-symbols-outlined">
+                    verified
+                </span>
+            </div>
+
+            <div>
+                <span>Verified Equipment</span>
+                <strong>118</strong>
+            </div>
+
+        </div>
+
+
+        <div class="equipment-overview-card">
+
+            <div class="equipment-overview-icon">
+                <span class="material-symbols-outlined">
+                    support_agent
+                </span>
+            </div>
+
+            <div>
+                <span>Service Support</span>
+                <strong>24/7</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-main-panel">
+
+        <div class="equipment-panel-heading">
+
+            <div>
+                <h3>Equipment Activity</h3>
+
+                <p>
+                    Recently accessed medical equipment
+                </p>
+            </div>
+
+            <a href="404.html">
+                View History
+            </a>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="equipment-item-icon">
+                <span class="material-symbols-outlined">
+                    ecg_heart
+                </span>
+            </div>
+
+            <div class="equipment-item-info">
+
+                <h4>Patient Monitoring System</h4>
+
+                <span>
+                    Monitoring Equipment
+                </span>
+
+            </div>
+
+            <div class="equipment-item-status active">
+                Available
+            </div>
+
+            <a href="404.html">
+                Details
+            </a>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="equipment-item-icon">
+                <span class="material-symbols-outlined">
+                    oxygen_saturation
+                </span>
+            </div>
+
+            <div class="equipment-item-info">
+
+                <h4>Pulse Oximeter</h4>
+
+                <span>
+                    Patient Monitoring
+                </span>
+
+            </div>
+
+            <div class="equipment-item-status active">
+                Available
+            </div>
+
+            <a href="404.html">
+                Details
+            </a>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="equipment-item-icon">
+                <span class="material-symbols-outlined">
+                    ventilator
+                </span>
+            </div>
+
+            <div class="equipment-item-info">
+
+                <h4>Portable Ventilator</h4>
+
+                <span>
+                    Respiratory Equipment
+                </span>
+
+            </div>
+
+            <div class="equipment-item-status service">
+                Under Service
+            </div>
+
+            <a href="404.html">
+                Details
+            </a>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="equipment-item-icon">
+                <span class="material-symbols-outlined">
+                    blood_pressure
+                </span>
+            </div>
+
+            <div class="equipment-item-info">
+
+                <h4>Digital BP Monitor</h4>
+
+                <span>
+                    Diagnostic Equipment
+                </span>
+
+            </div>
+
+            <div class="equipment-item-status active">
+                Available
+            </div>
+
+            <a href="404.html">
+                Details
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-support-box">
+
+        <div class="equipment-support-icon">
+
+            <span class="material-symbols-outlined">
+                engineering
+            </span>
+
+        </div>
+
+        <div>
+
+            <span>EQUIPMENT SERVICE</span>
+
+            <h3>Need equipment maintenance?</h3>
+
+            <p>
+                Submit a service request for inspection,
+                maintenance, or technical assistance.
+            </p>
+
+        </div>
+
+        <a href="404.html">
+            Request Service
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+            <!-- ==========================================
+                 PROFILE
+            =========================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-profile">
+
+
+                <div class="page-intro">
+
+                    <span>
+                        ACCOUNT
+                    </span>
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+                    <p>
+                        Manage your Stackly healthcare
+                        account information.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-page-card">
+
+
+                    <div
+                        class="profile-page-avatar"
+                        id="profilePageAvatar">
+
+                        Y
+
+                    </div>
+
+
+                    <div class="profile-page-info">
+
+                        <span>
+                            CLIENT ACCOUNT
+                        </span>
+
+                        <h3 id="profilePageName">
+                            Client
+                        </h3>
+
+                        <p id="profilePageEmail">
+                            client@stackly.com
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="404.html"
+                        class="primary-dashboard-btn">
+
+                        Edit Profile
+
+                    </a>
+
+                </div>
+
+
+                <div class="profile-information-grid">
+
+
+                    <div>
+
+                        <span>
+                            Email Address
+                        </span>
+
+                        <strong id="profileEmailField">
+                            client@stackly.com
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Account Type
+                        </span>
+
+                        <strong>
+                            Client
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Healthcare Status
+                        </span>
+
+                        <strong>
+                            Active
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Member Since
+                        </span>
+
+                        <strong>
+                            2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==========================================
+                 SETTINGS
+            =========================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-settings">
+
+
+                <div class="page-intro">
+
+                    <span>
+                        ACCOUNT SETTINGS
+                    </span>
+
+                    <h2>
+                        Dashboard Settings
+                    </h2>
+
+                    <p>
+                        Manage your Stackly dashboard
+                        preferences and account controls.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-list">
+
+
+                    <div class="settings-row">
+
+                        <div class="settings-icon">
+
+                            <span class="material-symbols-outlined">
+                                notifications
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Healthcare Notifications
+                            </h3>
+
+                            <p>
+                                Manage appointment and
+                                healthcare updates.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Manage
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="settings-row">
+
+                        <div class="settings-icon">
+
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Account Security
+                            </h3>
+
+                            <p>
+                                Manage password and
+                                account security settings.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Manage
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="settings-row">
+
+                        <div class="settings-icon">
+
+                            <span class="material-symbols-outlined">
+                                language
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Language Preferences
+                            </h3>
+
+                            <p>
+                                Configure your dashboard
+                                language preferences.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html"
+                           class="card-action">
+
+                            Manage
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- GSAP -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+
+<!-- DASHBOARD JS -->
+
+<script src="js/client-dashboard.js">
+</script>
+
+
+</body>
+
+</html>
