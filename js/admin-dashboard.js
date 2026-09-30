@@ -16,7 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.getItem("stacklyLoginName") ||
         "Admin";
 
+const sidebarUserName =
+    document.getElementById("sidebarUserName");
 
+if (sidebarUserName) {
+    sidebarUserName.textContent = userName;
+}
+
+
+/* SIDEBAR EMAIL */
+const sidebarUserEmail =
+    document.getElementById("sidebarUserEmail");
+
+if (sidebarUserEmail) {
+    sidebarUserEmail.textContent = userEmail;
+}
     /* =========================================
        FIRST LETTER OF EMAIL
     ========================================= */

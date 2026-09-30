@@ -3886,3 +3886,1008 @@ textarea {
     }
 }
 
+
+
+
+/* =========================================================
+   FINAL ADMIN DASHBOARD MOBILE FIX
+   SAME METHOD AS CLIENT DASHBOARD
+   ALL ADMIN PAGES
+   NO INITIAL MOBILE OVERFLOW
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL ADMIN MOBILE CONTAINER
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    .admin-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin-left: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    .admin-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 22px 15px 35px !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    .admin-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    .admin-page > * {
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    /* =====================================================
+       MOBILE SIDEBAR
+    ===================================================== */
+
+    .admin-sidebar {
+        width: 255px !important;
+        max-width: 255px !important;
+
+        transform: translateX(-100%) !important;
+
+        transition: transform .3s ease !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    .admin-sidebar.open {
+        transform: translateX(0) !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .admin-header {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 0 15px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-left {
+        min-width: 0 !important;
+        max-width: 55% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-title {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-title h1 {
+        max-width: 100% !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .admin-header-right {
+        min-width: 0 !important;
+        max-width: 45% !important;
+
+        flex-shrink: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-user {
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-user-info {
+        min-width: 0 !important;
+        max-width: 90px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-header-user-info strong,
+    .admin-header-user-info span {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* =====================================================
+       PAGE HEADING
+    ===================================================== */
+
+    .admin-page-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .admin-page-heading > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    .admin-page-heading h2,
+    .admin-page-heading p {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+
+    /* =====================================================
+       OVERVIEW PAGE
+    ===================================================== */
+
+    #admin-overview,
+    #page-overview {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #admin-overview .admin-stat-grid,
+    #page-overview .admin-stat-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #admin-overview .admin-stat-card,
+    #page-overview .admin-stat-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #admin-overview .admin-overview-grid,
+    #page-overview .admin-overview-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: 1fr !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #admin-overview .admin-panel,
+    #page-overview .admin-panel {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       PRODUCTS PAGE
+    ===================================================== */
+
+    #page-products,
+    #admin-products {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-products .admin-products-content,
+    #admin-products .admin-products-content {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-products .admin-products-header,
+    #admin-products .admin-products-header {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        gap: 14px !important;
+    }
+
+
+    #page-products .admin-products-heading,
+    #admin-products .admin-products-heading {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    #page-products .admin-products-heading h2,
+    #page-products .admin-products-heading p,
+    #admin-products .admin-products-heading h2,
+    #admin-products .admin-products-heading p {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+
+    #page-products .admin-product-summary,
+    #admin-products .admin-product-summary {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 9px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-products .admin-product-summary-card,
+    #admin-products .admin-product-summary-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-products .admin-products-panel,
+    #admin-products .admin-products-panel {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-products .admin-product-row,
+    #admin-products .admin-product-row {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns:
+            42px
+            minmax(0, 1fr)
+            auto !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-products .admin-product-info,
+    #admin-products .admin-product-info {
+
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-products .admin-product-info h4,
+    #page-products .admin-product-info span,
+    #admin-products .admin-product-info h4,
+    #admin-products .admin-product-info span {
+
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+
+    /* =====================================================
+       ORDERS PAGE
+    ===================================================== */
+
+    #page-orders,
+    #admin-orders {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-orders .admin-orders-content,
+    #admin-orders .admin-orders-content {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-orders .admin-orders-header,
+    #admin-orders .admin-orders-header {
+
+        width: 100% !important;
+
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        gap: 14px !important;
+    }
+
+
+    #page-orders .admin-orders-heading,
+    #admin-orders .admin-orders-heading {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    #page-orders .admin-orders-heading h2,
+    #page-orders .admin-orders-heading p,
+    #admin-orders .admin-orders-heading h2,
+    #admin-orders .admin-orders-heading p {
+
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+
+    #page-orders .admin-orders-overview,
+    #admin-orders .admin-orders-overview {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 9px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-orders .admin-orders-overview-card,
+    #admin-orders .admin-orders-overview-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-orders .admin-orders-panel,
+    #admin-orders .admin-orders-panel {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-orders .admin-order-row,
+    #admin-orders .admin-order-row {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       CUSTOMERS PAGE
+    ===================================================== */
+
+    #page-customers,
+    #admin-customers {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-customers .customer-summary,
+    #admin-customers .customer-summary {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-customers .customer-summary > div,
+    #admin-customers .customer-summary > div {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-customers .customer-summary-main,
+    #admin-customers .customer-summary-main {
+
+        grid-column: 1 / -1 !important;
+    }
+
+
+    /* =====================================================
+       INVENTORY PAGE
+    ===================================================== */
+
+    #page-inventory,
+    #admin-inventory {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-inventory .inventory-grid,
+    #admin-inventory .inventory-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-inventory .inventory-card,
+    #admin-inventory .inventory-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       SUPPLIERS PAGE
+    ===================================================== */
+
+    #page-suppliers,
+    #admin-suppliers {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-suppliers .supplier-grid,
+    #admin-suppliers .supplier-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-suppliers .supplier-card,
+    #admin-suppliers .supplier-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       REPORTS PAGE
+    ===================================================== */
+
+    #page-reports,
+    #admin-reports {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-reports .report-grid,
+    #admin-reports .report-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-reports .report-card,
+    #admin-reports .report-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       STAFF MANAGEMENT
+    ===================================================== */
+
+    #page-staff,
+    #admin-staff {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-staff .staff-grid,
+    #admin-staff .staff-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-staff .staff-card,
+    #admin-staff .staff-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       SETTINGS
+    ===================================================== */
+
+    #page-settings,
+    #admin-settings {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-settings .settings-grid,
+    #admin-settings .settings-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-settings .settings-card,
+    #admin-settings .settings-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       PROFILE
+    ===================================================== */
+
+    #page-profile,
+    #admin-profile {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #page-profile .profile-page-card,
+    #admin-profile .profile-page-card {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    #page-profile .profile-information-grid,
+    #admin-profile .profile-information-grid {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+
+    #page-profile .profile-information-grid > div,
+    #admin-profile .profile-information-grid > div {
+
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       TABLE WRAPPERS
+       TABLE ITSELF CAN SCROLL
+       PAGE CANNOT
+    ===================================================== */
+
+    .admin-table-wrapper,
+    .orders-table-wrapper {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .admin-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 16px 11px 30px !important;
+    }
+
+
+    .admin-header {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 0 10px !important;
+    }
+
+
+    .admin-header-left {
+        max-width: 50% !important;
+    }
+
+
+    .admin-header-right {
+        max-width: 50% !important;
+
+        gap: 4px !important;
+    }
+
+
+    .admin-header-title {
+        max-width: 125px !important;
+    }
+
+
+    .admin-header-title h1 {
+        font-size: 12px !important;
+    }
+
+
+    .admin-header-icon {
+        width: 34px !important;
+        height: 34px !important;
+
+        min-width: 34px !important;
+    }
+
+
+    .admin-header-avatar {
+        width: 34px !important;
+        height: 34px !important;
+
+        min-width: 34px !important;
+    }
+
+
+    .admin-header-user-info {
+        width: 55px !important;
+        max-width: 55px !important;
+    }
+
+
+    /* OVERVIEW */
+
+    #admin-overview .admin-stat-grid,
+    #page-overview .admin-stat-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 9px !important;
+    }
+
+
+    #admin-overview .admin-stat-card,
+    #page-overview .admin-stat-card {
+
+        padding: 12px !important;
+    }
+
+
+    /* PRODUCTS */
+
+    #page-products .admin-product-summary,
+    #admin-products .admin-product-summary {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+    }
+
+
+    /* ORDERS */
+
+    #page-orders .admin-orders-overview,
+    #admin-orders .admin-orders-overview {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+    }
+
+
+    /* CUSTOMERS */
+
+    #page-customers .customer-summary,
+    #admin-customers .customer-summary {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+    }
+
+
+    /* PROFILE */
+
+    #page-profile .profile-information-grid,
+    #admin-profile .profile-information-grid {
+
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /* ALL ADMIN TEXT */
+
+    .admin-page h1,
+    .admin-page h2,
+    .admin-page h3,
+    .admin-page h4,
+    .admin-page p,
+    .admin-page span,
+    .admin-page strong {
+
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+}
+
+
+.admin-side-user {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.admin-side-user strong,
+.admin-side-user span {
+    display: block !important;
+    max-width: 100% !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+

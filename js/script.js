@@ -201,3 +201,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =========================================
+   PREMIUM LOADER
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loader = document.getElementById("premiumPageLoader");
+
+    if (!loader) return;
+
+    setTimeout(() => {
+
+        loader.classList.add("loader-hidden");
+
+    }, 1600);
+
+});
