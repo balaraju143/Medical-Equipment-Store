@@ -4035,26 +4035,26 @@ textarea {
     }
 
 
+
     .admin-header-user-info {
-        min-width: 0 !important;
-        max-width: 90px !important;
+    min-width: 0 !important;
+    width: 90px !important;
 
-        overflow: hidden !important;
-    }
+    overflow: hidden !important;
+}
 
 
-    .admin-header-user-info strong,
-    .admin-header-user-info span {
-        display: block !important;
+.admin-header-user-info strong,
+.admin-header-user-info span {
+    display: block !important;
 
-        width: 100% !important;
-        max-width: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
 
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
 
     /* =====================================================
        PAGE HEADING
@@ -4746,6 +4746,8 @@ textarea {
         max-width: 100% !important;
 
         padding: 0 10px !important;
+
+    
     }
 
 
@@ -4788,8 +4790,7 @@ textarea {
 
 
     .admin-header-user-info {
-        width: 55px !important;
-        max-width: 55px !important;
+        width: 85px !important;
     }
 
 
@@ -4891,3 +4892,38 @@ textarea {
     text-overflow: ellipsis !important;
 }
 
+
+/* =========================================
+   ADMIN NAME + EMAIL
+   HIDE ON MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .admin-header-user-info {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .admin-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 65px !important;
+        z-index: 1000 !important;
+    }
+
+    .admin-main {
+        margin-left: 0 !important;
+        padding-top: 65px !important;
+        width: 100% !important;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+}

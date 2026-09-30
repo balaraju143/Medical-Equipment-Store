@@ -5212,3 +5212,234 @@ input {
     }
 
 }
+
+
+/* =========================================
+   MY ORDERS - MOBILE SUMMARY FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    .order-summary {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+
+        /* 3 cards in one row */
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+
+        margin: 18px 0 0 !important;
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    .order-summary-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        height: 92px !important;
+
+        padding: 12px 8px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 8px !important;
+
+        border-radius: 13px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Icon */
+
+    .order-summary-icon {
+        width: 40px !important;
+        min-width: 40px !important;
+        height: 40px !important;
+
+        flex-shrink: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        border-radius: 10px !important;
+    }
+
+
+    .order-summary-icon .material-symbols-outlined {
+        font-size: 19px !important;
+    }
+
+
+    /* Text wrapper */
+
+    .order-summary-card > div:last-child {
+        min-width: 0 !important;
+        width: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        text-align: left !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Label */
+
+    .order-summary-card span:not(.material-symbols-outlined) {
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 12px !important;
+        line-height: 1.25 !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        text-align: left !important;
+    }
+
+
+    /* Number */
+
+    .order-summary-card strong {
+        display: block !important;
+
+        margin-top: 3px !important;
+
+        font-size: 21px !important;
+        line-height: 1 !important;
+
+        font-weight: 800 !important;
+
+        text-align: left !important;
+
+        white-space: nowrap !important;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .order-summary {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+
+        margin-top: 16px !important;
+    }
+
+
+    .order-summary-card {
+        height: 88px !important;
+
+        padding: 10px 6px !important;
+
+        gap: 6px !important;
+
+        border-radius: 12px !important;
+    }
+
+
+    .order-summary-icon {
+        width: 34px !important;
+        min-width: 34px !important;
+
+        height: 34px !important;
+
+        border-radius: 9px !important;
+    }
+
+
+    .order-summary-icon .material-symbols-outlined {
+        font-size: 17px !important;
+    }
+
+
+    .order-summary-card span:not(.material-symbols-outlined) {
+        font-size: 12px !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    .order-summary-card strong {
+        font-size: 20px !important;
+
+        margin-top: 3px !important;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .order-summary {
+        gap: 6px !important;
+    }
+
+
+    .order-summary-card {
+        height: 84px !important;
+
+        padding: 8px 5px !important;
+
+        gap: 5px !important;
+    }
+
+
+    .order-summary-icon {
+        width: 31px !important;
+        min-width: 31px !important;
+
+        height: 31px !important;
+    }
+
+
+    .order-summary-icon .material-symbols-outlined {
+        font-size: 15px !important;
+    }
+
+
+    .order-summary-card span:not(.material-symbols-outlined) {
+        font-size: 12px !important;
+    }
+
+
+    .order-summary-card strong {
+        font-size: 19px !important;
+    }
+
+}
